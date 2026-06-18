@@ -36,6 +36,112 @@
     <!-- main style css -->
     <link rel="stylesheet" href="assets/css/style.css">
 
+    <!-- Custom Premium Styling for Image Sections & Safety Cards -->
+    <style>
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            14% { transform: scale(1.06); }
+            28% { transform: scale(1); }
+            42% { transform: scale(1.06); }
+            70% { transform: scale(1); }
+        }
+        @keyframes floatCard {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+            100% { transform: translateY(0); }
+        }
+        .about-image-card {
+            position: relative;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+            border: 1px solid rgba(0,0,0,0.08);
+            background: #ffffff;
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            animation: floatCard 3.5s ease-in-out infinite;
+        }
+        .about-image-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+        .about-image-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 20px 40px rgba(247, 148, 29, 0.12);
+            border-color: rgba(247, 148, 29, 0.3);
+            animation-play-state: paused;
+        }
+        .about-image-card:hover img {
+            transform: scale(1.03);
+        }
+        .about-image-badge {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background: #F7941D;
+            color: #ffffff;
+            padding: 8px 18px;
+            border-radius: 8px;
+            font-weight: 700;
+            box-shadow: 0 6px 15px rgba(247, 148, 29, 0.2);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 11px;
+            z-index: 2;
+            letter-spacing: 0.5px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            animation: heartbeat 1.8s infinite ease-in-out;
+        }
+        .about-image-badge-dark {
+            background: #222222;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+            animation-delay: 0.9s;
+        }
+        .safety-card {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+            border: 1px solid rgba(0,0,0,0.04);
+            transition: all 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .safety-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(247, 148, 29, 0.08);
+            border-color: rgba(247, 148, 29, 0.2);
+        }
+        .safety-icon-wrapper {
+            background: rgba(247, 148, 29, 0.1);
+            color: #F7941D;
+            width: 50px;
+            height: 50px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+        }
+        .safety-card:hover .safety-icon-wrapper {
+            background: #F7941D;
+            color: #ffffff;
+            box-shadow: 0 5px 15px rgba(247, 148, 29, 0.25);
+        }
+        .safety-warn-box {
+            background: rgba(231, 76, 60, 0.05);
+            border-left: 5px solid #e74c3c;
+            padding: 20px;
+            border-radius: 4px 12px 12px 4px;
+            margin-top: 25px;
+        }
+    </style>
 </head>
 
 <body>
@@ -222,110 +328,337 @@
         </div>
         <!-- breadcrumb section end -->
 
-        <!-- blog section start -->
-        <section class="blog-area section-padding widgettitle">
+        <!-- intro section start -->
+        <div class="service-details-area section-padding" style="background: #ffffff; padding: 100px 0 60px; overflow: hidden;">
             <div class="container">
-                
-                    <div class="col-lg-12 order-1 order-lg-2">
-                        <!-- blog single post start -->
-                        <div class="blog-post-item">
-                            <!-- <div class="blog-thumb details-thumb"> -->
-                                <!-- <img src="assets/img/cargo.webp" alt="Cargo Fumigation"> -->
-                            <!-- </div> -->
-                            <div class="blog-content blog-details">
-                                <h2 class="blog-title">
-                                    Safety practices
-                                </h2>
-								<h5 class="widget-title">Safety practices for fumigation include: </h5>
-								<p><b>Container management: </b>Regularly check containers and valves for leaks, and dispose of empty containers according to state regulations. </p>
-								<p><b>Ventilation: </b>Before entering a storage area, run an exhaust fan to remove vapors.</p>
-								<p><b>Labeling: </b>Ensure containers are labeled. </p>
-								<p><b>Fire safety: </b>Conduct a fire risk assessment and provide fire safety training to employees. </p>
-								<p><b>Personal protection: </b>Wear respiratory protection and avoid contact with the skin. If clothing or skin becomes contaminated, wash immediately. </p>
-								<p><b>Environmental protection: </b>Use environmentally friendly fumigants and pesticides when possible. </p>
-								<p><b>Water safety: </b>Avoid contaminating water supplies. </p>
-								<p><b>Child safety: </b>Keep pesticides and empty containers out of reach of children.</p> 
-								<p>Fumigation involves using a fumigant gas to kill infestations in a space. The space is then ventilated to allow the gases to escape. </p>
-								<p>Fumigation can be dangerous and pose risks to human health and the environment.</p>
-
+                <div class="row align-items-center">
+                    <!-- Image Column (Left Side - Premium Safety Image Card) -->
+                    <div class="col-lg-5 order-1">
+                        <div class="about-image-card" style="height: 460px; margin-bottom: 30px;">
+                            <img src="assets/img/cargo1.png" alt="Star Fumigation Agencies - Safety Practices" />
+                            <div class="about-image-badge">
+                                <i class="fa fa-heartbeat"></i> Zero Accidents
+                            </div>
+                            <div class="about-image-badge about-image-badge-dark" style="left: auto; right: 20px;">
+                                <i class="fa fa-shield"></i> Safety First
                             </div>
                         </div>
-                        <!-- blog single post start -->
+                    </div>
+                    
+                    <!-- Text Column (Right Side) -->
+                    <div class="col-lg-7 order-2" style="padding-left: 30px;">
+                        <div style="background: #ffffff; padding: 45px; border-radius: 24px; box-shadow: 0 15px 45px rgba(0,0,0,0.03); border: 1px solid rgba(0,0,0,0.04); position: relative; margin-bottom: 30px;">
+                            <div class="section-title" style="margin-bottom: 25px;">
+                                <span style="color: #F7941D; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 2.5px; display: block; margin-bottom: 10px;">Safety Protocol</span>
+                                <h2 class="title" style="font-size: 34px; font-weight: 800; color: #222; line-height: 1.3; margin-bottom: 20px;">Safety Practices</h2>
+                            </div>
+                            
+                            <blockquote style="background: rgba(247, 148, 29, 0.03); border-left: 5px solid #F7941D; padding: 25px; border-radius: 4px 12px 12px 4px; margin-bottom: 25px;">
+                                <h5 class="widget-title" style="font-size: 16px; font-weight: 700; color: #222; margin: 0 0 10px 0;">Safety practices for fumigation include:</h5>
+                                <p style="font-size: 15px; color: #555; line-height: 1.8; margin: 0;">
+                                    Fumigation involves using a fumigant gas to kill infestations in a space. The space is then ventilated to allow the gases to escape.
+                                </p>
+                            </blockquote>
+                            
+                            <div class="safety-warn-box">
+                                <p style="font-size: 15px; color: #c0392b; font-weight: 600; line-height: 1.8; margin: 0;">
+                                    <i class="fa fa-exclamation-triangle"></i> Fumigation can be dangerous and pose risks to human health and the environment.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-                                       
+                <div class="row justify-content-center" style="margin-top: 60px;">
+                    <div class="col-lg-8 text-center" style="margin-bottom: 50px;">
+                        <span style="color: #F7941D; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 2.5px; display: block; margin-bottom: 10px;">Safety Measures</span>
+                        <h3 style="font-size: 28px; font-weight: 800; color: #222;">Core Safety Operations</h3>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <!-- Card 1 -->
+                    <div class="col-md-6 col-lg-3 mb-4">
+                        <div class="safety-card">
+                            <div class="safety-icon-wrapper">
+                                <i class="fa fa-archive"></i>
+                            </div>
+                            <h5 style="font-size: 16px; font-weight: 700; color: #222; margin-bottom: 12px;">Container Management</h5>
+                            <p style="font-size: 14px; color: #666; line-height: 1.6; margin: 0;">Regularly inspect pressurized cylinders, fittings, and regulator valves for structural leaks. Keep comprehensive cylinder maintenance logs and safely dispose of empty cylinders strictly adhering to national hazardous waste regulations and manufacturer guidelines.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="col-md-6 col-lg-3 mb-4">
+                        <div class="safety-card">
+                            <div class="safety-icon-wrapper">
+                                <i class="fa fa-refresh"></i>
+                            </div>
+                            <h5 style="font-size: 16px; font-weight: 700; color: #222; margin-bottom: 12px;">Ventilation</h5>
+                            <p style="font-size: 14px; color: #666; line-height: 1.6; margin: 0;">Operate high-capacity forced-induction exhaust fans to fully exchange air and disperse residual vapors. Always perform positive clearance testing using calibrated gas detectors before permitting personnel entry into any previously fumigated storage zone.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="col-md-6 col-lg-3 mb-4">
+                        <div class="safety-card">
+                            <div class="safety-icon-wrapper">
+                                <i class="fa fa-tag"></i>
+                            </div>
+                            <h5 style="font-size: 16px; font-weight: 700; color: #222; margin-bottom: 12px;">Labeling</h5>
+                            <p style="font-size: 14px; color: #666; line-height: 1.6; margin: 0;">Clearly mark all chemical storage cylinders with weather-resistant labels detailing the product name, active concentration, hazard classifications, and emergency phone numbers. Post highly visible danger/poison warnings at all facility entryways during active treatments.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="col-md-6 col-lg-3 mb-4">
+                        <div class="safety-card">
+                            <div class="safety-icon-wrapper">
+                                <i class="fa fa-shield"></i>
+                            </div>
+                            <h5 style="font-size: 16px; font-weight: 700; color: #222; margin-bottom: 12px;">Fire Safety</h5>
+                            <p style="font-size: 14px; color: #666; line-height: 1.6; margin: 0;">Carry out comprehensive fire risk assessments in storage bays. Equip facilities with Class D and dry chemical fire extinguishers, install fail-safe electrical grounding systems to mitigate static sparks, and conduct regular fire-response training exercises with staff.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div class="col-md-6 col-lg-3 mb-4">
+                        <div class="safety-card">
+                            <div class="safety-icon-wrapper">
+                                <i class="fa fa-user-md"></i>
+                            </div>
+                            <h5 style="font-size: 16px; font-weight: 700; color: #222; margin-bottom: 12px;">Personal Protection</h5>
+                            <p style="font-size: 14px; color: #666; line-height: 1.6; margin: 0;">Equip all handlers with approved Self-Contained Breathing Apparatus (SCBA) or full-face respirators fitted with proper chemical canisters. Enforce the use of heavy-duty chemical-resistant gloves, protective coveralls, and steel-toed boots. Wash skin immediately in emergency shower bays if contact occurs.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 6 -->
+                    <div class="col-md-6 col-lg-3 mb-4">
+                        <div class="safety-card">
+                            <div class="safety-icon-wrapper">
+                                <i class="fa fa-leaf"></i>
+                            </div>
+                            <h5 style="font-size: 16px; font-weight: 700; color: #222; margin-bottom: 12px;">Environmental Protection</h5>
+                            <p style="font-size: 14px; color: #666; line-height: 1.6; margin: 0;">Minimize ecological footprints by employing precision gas dosing systems to prevent excess chemical release. Opt for targeted, bio-degradable pest controls and low-impact organic alternatives whenever they align with import/export biosecurity guidelines.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 7 -->
+                    <div class="col-md-6 col-lg-3 mb-4">
+                        <div class="safety-card">
+                            <div class="safety-icon-wrapper">
+                                <i class="fa fa-tint"></i>
+                            </div>
+                            <h5 style="font-size: 16px; font-weight: 700; color: #222; margin-bottom: 12px;">Water Safety</h5>
+                            <p style="font-size: 14px; color: #666; line-height: 1.6; margin: 0;">Design concrete containment bunds and buffer zones around chemical storage areas to prevent liquid runoff. Never perform cleaning operations near local surface streams, municipal drainage networks, or underground water tables.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 8 -->
+                    <div class="col-md-6 col-lg-3 mb-4">
+                        <div class="safety-card">
+                            <div class="safety-icon-wrapper">
+                                <i class="fa fa-child"></i>
+                            </div>
+                            <h5 style="font-size: 16px; font-weight: 700; color: #222; margin-bottom: 12px;">Storage Security</h5>
+                            <p style="font-size: 14px; color: #666; line-height: 1.6; margin: 0;">Store all fumigants, equipment, and spent canisters in secure, double-locked containment cabinets protected by electronic access controls and surveillance. Ensure warning signs ("AUTHORIZED PERSONNEL ONLY") are posted prominently at all times.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Safety Workflow & Checklist Section -->
+                <div class="row justify-content-center" style="margin-top: 80px;">
+                    <div class="col-lg-8 text-center" style="margin-bottom: 50px;">
+                        <span style="color: #F7941D; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 2.5px; display: block; margin-bottom: 10px;">Operational Flow</span>
+                        <h3 style="font-size: 28px; font-weight: 800; color: #222;">Step-by-Step Safety Checklist</h3>
+                    </div>
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="col-lg-4 mb-4">
+                        <div style="background: #ffffff; padding: 35px; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.02); border: 1px solid rgba(0,0,0,0.04); height: 100%; border-top: 4px solid #F7941D;">
+                            <h5 style="font-size: 18px; font-weight: 700; color: #222; margin-bottom: 20px; display: flex; align-items: center; gap: 10px;">
+                                <span style="background: rgba(247,148,29,0.1); color: #F7941D; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 800;">1</span>
+                                Pre-Fumigation Audit
+                            </h5>
+                            <ul style="list-style: none; padding: 0; margin: 0;">
+                                <li style="position: relative; padding-left: 25px; margin-bottom: 15px; font-size: 14px; color: #555; line-height: 1.6;">
+                                    <i class="fa fa-check" style="position: absolute; left: 0; top: 4px; color: #F7941D;"></i>
+                                    Perform complete structural integrity inspection of the area to be treated.
+                                </li>
+                                <li style="position: relative; padding-left: 25px; margin-bottom: 15px; font-size: 14px; color: #555; line-height: 1.6;">
+                                    <i class="fa fa-check" style="position: absolute; left: 0; top: 4px; color: #F7941D;"></i>
+                                    Verify all access entry points are sealed airtight using industrial gas-proof sheets.
+                                </li>
+                                <li style="position: relative; padding-left: 25px; margin-bottom: 15px; font-size: 14px; color: #555; line-height: 1.6;">
+                                    <i class="fa fa-check" style="position: absolute; left: 0; top: 4px; color: #F7941D;"></i>
+                                    Evacuate all non-authorized personnel and verify presence of required PPE.
+                                </li>
+                                <li style="position: relative; padding-left: 25px; font-size: 14px; color: #555; line-height: 1.6;">
+                                    <i class="fa fa-check" style="position: absolute; left: 0; top: 4px; color: #F7941D;"></i>
+                                    Post bold warning signs (Danger/Poison) at all prominent boundaries.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 mb-4">
+                        <div style="background: #ffffff; padding: 35px; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.02); border: 1px solid rgba(0,0,0,0.04); height: 100%; border-top: 4px solid #222222;">
+                            <h5 style="font-size: 18px; font-weight: 700; color: #222; margin-bottom: 20px; display: flex; align-items: center; gap: 10px;">
+                                <span style="background: rgba(34,34,34,0.1); color: #222222; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 800;">2</span>
+                                During Treatment Safety
+                            </h5>
+                            <ul style="list-style: none; padding: 0; margin: 0;">
+                                <li style="position: relative; padding-left: 25px; margin-bottom: 15px; font-size: 14px; color: #555; line-height: 1.6;">
+                                    <i class="fa fa-check" style="position: absolute; left: 0; top: 4px; color: #222222;"></i>
+                                    Monitor gas concentrations continuously using remote electronic sensor lines.
+                                </li>
+                                <li style="position: relative; padding-left: 25px; margin-bottom: 15px; font-size: 14px; color: #555; line-height: 1.6;">
+                                    <i class="fa fa-check" style="position: absolute; left: 0; top: 4px; color: #222222;"></i>
+                                    Maintain visual perimeter surveillance to prevent accidental site breaches.
+                                </li>
+                                <li style="position: relative; padding-left: 25px; margin-bottom: 15px; font-size: 14px; color: #555; line-height: 1.6;">
+                                    <i class="fa fa-check" style="position: absolute; left: 0; top: 4px; color: #222222;"></i>
+                                    Keep emergency SCBA units and communication equipment fully charged on standby.
+                                </li>
+                                <li style="position: relative; padding-left: 25px; font-size: 14px; color: #555; line-height: 1.6;">
+                                    <i class="fa fa-check" style="position: absolute; left: 0; top: 4px; color: #222222;"></i>
+                                    Log weather patterns (wind speed/direction) to assess drift safety boundary.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 mb-4">
+                        <div style="background: #ffffff; padding: 35px; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.02); border: 1px solid rgba(0,0,0,0.04); height: 100%; border-top: 4px solid #F7941D;">
+                            <h5 style="font-size: 18px; font-weight: 700; color: #222; margin-bottom: 20px; display: flex; align-items: center; gap: 10px;">
+                                <span style="background: rgba(247,148,29,0.1); color: #F7941D; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 800;">3</span>
+                                Post-Treatment Clearance
+                            </h5>
+                            <ul style="list-style: none; padding: 0; margin: 0;">
+                                <li style="position: relative; padding-left: 25px; margin-bottom: 15px; font-size: 14px; color: #555; line-height: 1.6;">
+                                    <i class="fa fa-check" style="position: absolute; left: 0; top: 4px; color: #F7941D;"></i>
+                                    Initiate controlled exhaust system ventilation until TLV guidelines are achieved.
+                                </li>
+                                <li style="position: relative; padding-left: 25px; margin-bottom: 15px; font-size: 14px; color: #555; line-height: 1.6;">
+                                    <i class="fa fa-check" style="position: absolute; left: 0; top: 4px; color: #F7941D;"></i>
+                                    Conduct multi-point clearance testing using calibrated gas detection devices.
+                                </li>
+                                <li style="position: relative; padding-left: 25px; margin-bottom: 15px; font-size: 14px; color: #555; line-height: 1.6;">
+                                    <i class="fa fa-check" style="position: absolute; left: 0; top: 4px; color: #F7941D;"></i>
+                                    Issue official Fumigation Certificate only after zero residual gas is verified.
+                                </li>
+                                <li style="position: relative; padding-left: 25px; font-size: 14px; color: #555; line-height: 1.6;">
+                                    <i class="fa fa-check" style="position: absolute; left: 0; top: 4px; color: #F7941D;"></i>
+                                    Remove safety seals, sign boards, and return containment zones to standard access.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Emergency Protocols Section -->
+                <div class="row justify-content-center" style="margin-top: 80px;">
+                    <div class="col-lg-8 text-center" style="margin-bottom: 50px;">
+                        <span style="color: #e74c3c; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 2.5px; display: block; margin-bottom: 10px;">Emergency Preparedness</span>
+                        <h3 style="font-size: 28px; font-weight: 800; color: #222;">First Aid & Exposure Protocols</h3>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-6 mb-4">
+                        <div style="background: rgba(231, 76, 60, 0.02); padding: 40px; border-radius: 20px; border: 1px solid rgba(231, 76, 60, 0.15); height: 100%;">
+                            <h4 style="font-size: 20px; font-weight: 800; color: #c0392b; margin-bottom: 25px; display: flex; align-items: center; gap: 12px;">
+                                <i class="fa fa-ambulance" style="font-size: 24px;"></i> Inhalation Exposure Response
+                            </h4>
+                            <ul style="list-style: none; padding: 0; margin: 0;">
+                                <li style="margin-bottom: 20px; font-size: 15px; color: #444; line-height: 1.6; display: flex; gap: 12px;">
+                                    <span style="color: #e74c3c; font-weight: bold; font-size: 18px;">•</span>
+                                    <div><strong>Immediate Evacuation:</strong> Immediately move the affected worker to fresh air. If doing so, rescue personnel must wear positive-pressure SCBA equipment to prevent secondary exposure.</div>
+                                </li>
+                                <li style="margin-bottom: 20px; font-size: 15px; color: #444; line-height: 1.6; display: flex; gap: 12px;">
+                                    <span style="color: #e74c3c; font-weight: bold; font-size: 18px;">•</span>
+                                    <div><strong>Respiratory Support:</strong> If the patient is not breathing, administer artificial respiration immediately using a bag-valve-mask. Do not perform direct mouth-to-mouth resuscitation.</div>
+                                </li>
+                                <li style="font-size: 15px; color: #444; line-height: 1.6; display: flex; gap: 12px;">
+                                    <span style="color: #e74c3c; font-weight: bold; font-size: 18px;">•</span>
+                                    <div><strong>Medical Attention:</strong> Administer medical oxygen if breathing is labored and keep the patient warm. Seek urgent specialized emergency medical support immediately.</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 mb-4">
+                        <div style="background: rgba(231, 76, 60, 0.02); padding: 40px; border-radius: 20px; border: 1px solid rgba(231, 76, 60, 0.15); height: 100%;">
+                            <h4 style="font-size: 20px; font-weight: 800; color: #c0392b; margin-bottom: 25px; display: flex; align-items: center; gap: 12px;">
+                                <i class="fa fa-eye-slash" style="font-size: 24px;"></i> Skin & Eye Contact Protocols
+                            </h4>
+                            <ul style="list-style: none; padding: 0; margin: 0;">
+                                <li style="margin-bottom: 20px; font-size: 15px; color: #444; line-height: 1.6; display: flex; gap: 12px;">
+                                    <span style="color: #e74c3c; font-weight: bold; font-size: 18px;">•</span>
+                                    <div><strong>Skin Irrigation:</strong> Immediately strip off contaminated clothing under an emergency shower. Wash the affected skin surface thoroughly with copious amounts of water and mild soap for at least 15 minutes.</div>
+                                </li>
+                                <li style="margin-bottom: 20px; font-size: 15px; color: #444; line-height: 1.6; display: flex; gap: 12px;">
+                                    <span style="color: #e74c3c; font-weight: bold; font-size: 18px;">•</span>
+                                    <div><strong>Eye Flushing:</strong> Flush eyes immediately with wide, continuous streams of clean water using dedicated eye wash stations. Keep eyelids wide open and flush for at least 15-20 minutes.</div>
+                                </li>
+                                <li style="font-size: 15px; color: #444; line-height: 1.6; display: flex; gap: 12px;">
+                                    <span style="color: #e74c3c; font-weight: bold; font-size: 18px;">•</span>
+                                    <div><strong>Clinical Evaluation:</strong> Cover any chemical skin burns with clean, sterile dressings. Transport the patient to the nearest specialty hospital unit for emergency clinical evaluation and treatment.</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Accreditation & Safety Standards Section -->
+                <div class="row justify-content-center" style="margin-top: 80px;">
+                    <div class="col-lg-8 text-center" style="margin-bottom: 50px;">
+                        <span style="color: #F7941D; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 2.5px; display: block; margin-bottom: 10px;">Accredited Standards</span>
+                        <h3 style="font-size: 28px; font-weight: 800; color: #222;">Quarantine & Regulatory Standards</h3>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4 mb-4">
+                        <div style="background: #ffffff; padding: 35px; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.02); border: 1px solid rgba(0,0,0,0.04); text-align: center; height: 100%;">
+                            <div style="background: rgba(247,148,29,0.1); color: #F7941D; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; margin: 0 auto 20px;">
+                                <i class="fa fa-globe"></i>
+                            </div>
+                            <h5 style="font-size: 18px; font-weight: 700; color: #222; margin-bottom: 15px;">IPPC & ISPM-15</h5>
+                            <p style="font-size: 14px; color: #666; line-height: 1.6; margin: 0;">Full compliance with International Standards for Phytosanitary Measures (ISPM 15) to prevent global transmission of forest pests through wood packaging materials used in export cargo.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 mb-4">
+                        <div style="background: #ffffff; padding: 35px; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.02); border: 1px solid rgba(0,0,0,0.04); text-align: center; height: 100%;">
+                            <div style="background: rgba(34,34,34,0.1); color: #222222; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; margin: 0 auto 20px;">
+                                <i class="fa fa-balance-scale"></i>
+                            </div>
+                            <h5 style="font-size: 18px; font-weight: 700; color: #222; margin-bottom: 15px;">CIB & RC Registrations</h5>
+                            <p style="font-size: 14px; color: #666; line-height: 1.6; margin: 0;">Authorized handling of government-regulated chemical fumigants like Methyl Bromide and Phosphine Gas, adhering to Central Insecticide Board and Registration Committee guidelines.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 mb-4">
+                        <div style="background: #ffffff; padding: 35px; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.02); border: 1px solid rgba(0,0,0,0.04); text-align: center; height: 100%;">
+                            <div style="background: rgba(247,148,29,0.1); color: #F7941D; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; margin: 0 auto 20px;">
+                                <i class="fa fa-certificate"></i>
+                            </div>
+                            <h5 style="font-size: 18px; font-weight: 700; color: #222; margin-bottom: 15px;">DPPQS National Standards</h5>
+                            <p style="font-size: 14px; color: #666; line-height: 1.6; margin: 0;">Operation under certifications issued by the Directorate of Plant Protection, Quarantine & Storage (DPPQS) to ensure safe, legally compliant national and international trade sanitization.</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </section>
-        <!-- blog section end -->
+        </div>
+        <!-- intro section end -->
     </main>
 
 
-    <!-- footer section start -->
-    <footer>
-        <div class="footer-widget-area gray-bg section-padding">
-            <div class="container">
-                <div class="row mtn-20">
-                    <div class="col-lg-4 col-md-6">
-                        <!-- footer single widget start -->
-                        <div class="footer-single-widget mt-30">
-						  <a href="index.html">
-								<img src="assets/img/logo/starfumigation-logo.png" alt="Star Fumigation">
-                                </a>
-                           
-                            <div class="widget-body">
-                                <p class="desc">STAR FUMIGATION is one of the leading, reliable affordable Fumigation and Pest Control company in India. We are a professionally managed Organization with Qualified Professionals.</p>
-                            </div>
-                        </div>
-                        <!-- footer single widget start -->
-                    </div>
-					       <div class="col-lg-4 col-md-6">
-                        <!-- footer single widget start -->
-                        <div class="footer-single-widget mt-30">
-                            <h5 class="widget-title">QUICK <span>LINKS</span></h5>
-                            <div class="widget-body">
-                                <ul class="useful-links">
-                                    <li><a href="about.html">Our Company</a></li>
-									  <li><a href="cargo_fumigation.html">Our Services</a></li>
-                                    <li><a href="fumigation.html">Technical Information</a></li>
-                                    <li><a href="contact.html">Contact Us</a></li>
-                               
-                                </ul>
-                            </div>
-                        </div>
-                        <!-- footer single widget start -->
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <!-- footer single widget start -->
-                        <div class="footer-single-widget mt-30">
-                            <h5 class="widget-title">CONTACT <span>US</span></h5>
-                            <div class="widget-body">
-                                <h6 class="widget-title1">STAR FUMIGATION</h6>
-									 <p class="desc">NO. 42/87, 3RD FLOOR,
-									LINGHI CHETTY STREET,
-									CHENNAI-600001
-									</p>
-                                <ul class="contact-info">
-                                    <li>P: <a href="tel:99556688526">044-25220065, 25220075, 25220076</a></li>
-                                    
-                                    <li>E: <a href="mailto:info@starfumigation.com">info@starfumigation.com</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <!-- footer single widget start -->
-                    </div>
-                            
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <div class="container">
-                <div class="copyright-text text-center">
-                    <p>&copy; 2025 Star Fumigation. Developed by <a href="https://www.aatheshsoft.com/" target="_blank"><b>Aathesh Soft Solutions</b></a></p>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <!-- footer section start (loaded from global footer.js) -->
+    <div id="footer-placeholder"></div>
+    <script src="footer.js"></script>
     <!-- footer section end -->
 
 

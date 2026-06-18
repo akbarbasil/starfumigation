@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html class="no-js" lang="zxx">
 
@@ -7,8 +6,12 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Star Fumigation - Fumigation Technology</title>
     <meta name="robots" content="noindex, follow" />
-    <meta content="STAR FUMIGATION AGENCIES is one of the leading, reliable affordable Fumigation and Pest Control company in India. We are a professionally managed Organization with Qualified Professionals." name="description" />
-<meta content=" STAR FUMIGATION AGENCIES, Empty Container Loaded Containers Fumigation, Air LCL Cargo Fumigation, Warehouse Fumigation,Mills Fumigation, Shipholds Fumigation, Timber Treatment Fumigation, Prophylactic Treatment for warehouse, Anti Fungal treatment for pallets used in export packing, Food Processing Machinery Fumigation, chennai,star fumigation in chennai,Tamilnadu,india,Aathesh Soft Solutions" name=Keywords />
+    <meta
+        content="STAR FUMIGATION AGENCIES is one of the leading, reliable affordable Fumigation and Pest Control company in India. We are a professionally managed Organization with Qualified Professionals."
+        name="description" />
+    <meta
+        content=" STAR FUMIGATION AGENCIES, Empty Container Loaded Containers Fumigation, Air LCL Cargo Fumigation, Warehouse Fumigation,Mills Fumigation, Shipholds Fumigation, Timber Treatment Fumigation, Prophylactic Treatment for warehouse, Anti Fungal treatment for pallets used in export packing, Food Processing Machinery Fumigation, chennai,star fumigation in chennai,Tamilnadu,india,Aathesh Soft Solutions"
+        name=Keywords />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
@@ -16,7 +19,9 @@
     <!-- CSS
 	============================================ -->
     <!-- google fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,500,500i,600,700,800,900%7COpen+Sans:300,300i,400,400i,600,700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,500,500i,600,700,800,900%7COpen+Sans:300,300i,400,400i,600,700&display=swap"
+        rel="stylesheet">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
     <!-- Font-awesome CSS -->
@@ -36,6 +41,228 @@
     <!-- main style css -->
     <link rel="stylesheet" href="assets/css/style.css">
 
+    <!-- Custom Premium Styling for Image Sections & Technology Cards -->
+    <style>
+        @keyframes heartbeat {
+            0% {
+                transform: scale(1);
+            }
+
+            14% {
+                transform: scale(1.06);
+            }
+
+            28% {
+                transform: scale(1);
+            }
+
+            42% {
+                transform: scale(1.06);
+            }
+
+            70% {
+                transform: scale(1);
+            }
+        }
+
+        @keyframes floatCard {
+            0% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-8px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        .about-image-card {
+            position: relative;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            background: #ffffff;
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            animation: floatCard 3.5s ease-in-out infinite;
+        }
+
+        .about-image-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        .about-image-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 20px 40px rgba(247, 148, 29, 0.12);
+            border-color: rgba(247, 148, 29, 0.3);
+            animation-play-state: paused;
+        }
+
+        .about-image-card:hover img {
+            transform: scale(1.03);
+        }
+
+        .about-image-badge {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background: #F7941D;
+            color: #ffffff;
+            padding: 8px 18px;
+            border-radius: 8px;
+            font-weight: 700;
+            box-shadow: 0 6px 15px rgba(247, 148, 29, 0.2);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 11px;
+            z-index: 2;
+            letter-spacing: 0.5px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            animation: heartbeat 1.8s infinite ease-in-out;
+        }
+
+        .about-image-badge-dark {
+            background: #222222;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+            animation-delay: 0.9s;
+        }
+
+        .tech-card {
+            background: #ffffff;
+            padding: 0;
+            overflow: hidden;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+            border: 1px solid rgba(0, 0, 0, 0.04);
+            transition: all 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .tech-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(247, 148, 29, 0.08);
+            border-color: rgba(247, 148, 29, 0.2);
+        }
+
+        .tech-card-image {
+            height: 180px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .tech-card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .tech-card:hover .tech-card-image img {
+            transform: scale(1.08);
+        }
+
+        .tech-card-body {
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .tech-card-body .tech-icon-wrapper {
+            margin-top: -57px;
+            position: relative;
+            z-index: 2;
+            border: 4px solid #ffffff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        .tech-icon-wrapper {
+            background: rgba(247, 148, 29, 0.1);
+            color: #F7941D;
+            width: 55px;
+            height: 55px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            margin-bottom: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .tech-card:hover .tech-icon-wrapper {
+            background: #F7941D;
+            color: #ffffff;
+            box-shadow: 0 5px 15px rgba(247, 148, 29, 0.25);
+        }
+
+        .tech-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .tech-list li {
+            position: relative;
+            padding-left: 26px;
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px dashed rgba(247, 148, 29, 0.15);
+            font-size: 14px;
+            color: #555;
+            line-height: 1.6;
+            text-align: left;
+        }
+
+        .tech-list li:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .tech-list li::before {
+            content: "\f00c";
+            font-family: FontAwesome;
+            position: absolute;
+            left: 0;
+            top: 2px;
+            color: #F7941D;
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .tech-list li strong {
+            color: #222;
+            font-weight: 700;
+            display: inline-block;
+            margin-right: 4px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
+        }
+
+        .tech-card-body h5 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 20px !important;
+            font-weight: 700 !important;
+            color: #222 !important;
+            margin-bottom: 22px !important;
+            position: relative;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #F7941D;
+            display: inline-block;
+        }
+    </style>
 </head>
 
 <body>
@@ -49,8 +276,10 @@
                     <div class="row">
                         <div class="col-lg-8">
                             <ul class="header-top-left">
-                                <li><i class="fa fa-headphones"></i><a href="tel:25240082">044-25220065, 25220075, 25220076</a></li>
-                                <li><i class="fa fa-envelope-open"></i><a href="mailto:info@starfumigation.com">info@starfumigation.com</a></li>
+                                <li><i class="fa fa-headphones"></i><a href="tel:25240082">044-25220065, 25220075,
+                                        25220076</a></li>
+                                <li><i class="fa fa-envelope-open"></i><a
+                                        href="mailto:info@starfumigation.com">info@starfumigation.com</a></li>
                             </ul>
                         </div>
                         <div class="col-lg-4">
@@ -74,7 +303,7 @@
                             <!-- logo area start -->
                             <div class="brand-logo">
                                 <a href="index.html">
-                                      <img src="assets/img/logo/starfumigation-logo.png" alt="Star Fumigation">
+                                    <img src="assets/img/logo/starfumigation-logo.png" alt="Star Fumigation">
                                 </a>
                             </div>
                             <!-- logo area end -->
@@ -82,29 +311,31 @@
                         <div class="col-lg-9">
                             <div class="main-menu-inner">
                                 <!-- main menu navbar start -->
-                                 <nav class="main-menu">
+                                <nav class="main-menu">
                                     <ul>
-                                       <li class="active"><a href="index.html">Home</a></li>
-                                        <li><a href="about.html">About Us</a></li>                                        
-                                        <li><a href="#">Services <i class="fa fa-angle-down"></i></a>										
+                                        <li class="active"><a href="index.html">Home</a></li>
+                                        <li><a href="about.html">About Us</a></li>
+                                        <li><a href="#">Services <i class="fa fa-angle-down"></i></a>
                                             <ul class="dropdown">
                                                 <li><a href="cargo_fumigation.html">Cargo Fumigation</a></li>
                                                 <li><a href="storage_fumigation.html">Storage Fumigation</a></li>
-											    <li><a href="food_processing.html">Food Processing</a></li>
-												<li><a href="craft_paper.html">Craft paper pasting & Desiccant</a></li>
-												<li><a href="pallet_fumigation.html">Pallet Cover Fumigatim</a></li>
-                                                <li><a href="organic_fumigation.html">Pest Mangement & Organic Fumigation</a></li>
-												<li><a href="ispm_fumigation.html">ISPM-15 Fumigation</a></li>
+                                                <li><a href="food_processing.html">Food Processing</a></li>
+                                                <li><a href="craft_paper.html">Craft paper pasting & Desiccant</a></li>
+                                                <li><a href="pallet_fumigation.html">Pallet Cover Fumigatim</a></li>
+                                                <li><a href="organic_fumigation.html">Pest Mangement & Organic
+                                                        Fumigation</a></li>
+                                                <li><a href="ispm_fumigation.html">ISPM-15 Fumigation</a></li>
                                                 <li><a href="phytosanitary.html">Phytosanitary Assitance</a></li>
                                             </ul>
                                         </li>
-										<li><a href="#"> Technical Infomation <i class="fa fa-angle-down"></i></a> 
-											<ul class="dropdown">										
-										        <li><a href="fumigation.html">Define Fumigation</a></li>
+                                        <li><a href="#"> Technical Infomation <i class="fa fa-angle-down"></i></a>
+                                            <ul class="dropdown">
+                                                <li><a href="fumigation.html">Define Fumigation</a></li>
                                                 <li><a href="technology.html">Technology of Fumigation</a></li>
-											    <li><a href="types.html">Types of Pest</a></li>
+                                                <li><a href="types.html">Types of Pest</a></li>
                                                 <li><a href="safety.html">Safety Pratices</a></li>
-											</ul></li>
+                                            </ul>
+                                        </li>
                                         <li><a href="contact.html">Contact us</a></li>
                                     </ul>
                                 </nav>
@@ -156,42 +387,44 @@
                 </div>
 
                 <div class="off-canvas-inner">
-                    
+
                     <!-- mobile menu start -->
                     <div class="mobile-navigation">
 
                         <!-- mobile menu navigation start -->
                         <nav>
                             <ul class="mobile-menu">
-										<li class="active"><a href="index.html">Home</a></li>
-                                        <li><a href="about.html">About Us</a></li>                                        
-                                        <li class="menu-item-has-children"><a href="#">Services </a>										
-                                            <ul class="dropdown">
-                                                <li><a href="cargo_fumigation.html">Cargo Fumigation</a></li>
-                                                <li><a href="storage_fumigation.html">Storage Fumigation</a></li>
-											    <li><a href="food_processing.html">Food Processing</a></li>
-												<li><a href="craft_paper.html">Craft paper pasting & Desiccant</a></li>
-												<li><a href="pallet_fumigation.html">Pallet Cover Fumigatim</a></li>
-                                                <li><a href="organic_fumigation.html">Pest Mangement & Organic Fumigation</a></li>
-												<li><a href="ispm_fumigation.html">ISPM-15 Fumigation</a></li>
-                                                <li><a href="phytosanitary.html">Phytosanitary Assitance</a></li>
-                                            </ul>
+                                <li class="active"><a href="index.html">Home</a></li>
+                                <li><a href="about.html">About Us</a></li>
+                                <li class="menu-item-has-children"><a href="#">Services </a>
+                                    <ul class="dropdown">
+                                        <li><a href="cargo_fumigation.html">Cargo Fumigation</a></li>
+                                        <li><a href="storage_fumigation.html">Storage Fumigation</a></li>
+                                        <li><a href="food_processing.html">Food Processing</a></li>
+                                        <li><a href="craft_paper.html">Craft paper pasting & Desiccant</a></li>
+                                        <li><a href="pallet_fumigation.html">Pallet Cover Fumigatim</a></li>
+                                        <li><a href="organic_fumigation.html">Pest Mangement & Organic Fumigation</a>
                                         </li>
-										<li class="menu-item-has-children"><a href="#"> Technical Infomation</a> 
-											<ul class="dropdown">										
-										        <li><a href="fumigation.html">Define Fumigation</a></li>
-                                                <li><a href="technology.html">Technology of Fumigation</a></li>
-											    <li><a href="types.html">Types of Pest</a></li>
-                                                <li><a href="safety.html">Safety Pratices</a></li>
-											</ul></li>
-                                        <li><a href="contact.html">Contact us</a></li>
+                                        <li><a href="ispm_fumigation.html">ISPM-15 Fumigation</a></li>
+                                        <li><a href="phytosanitary.html">Phytosanitary Assitance</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu-item-has-children"><a href="#"> Technical Infomation</a>
+                                    <ul class="dropdown">
+                                        <li><a href="fumigation.html">Define Fumigation</a></li>
+                                        <li><a href="technology.html">Technology of Fumigation</a></li>
+                                        <li><a href="types.html">Types of Pest</a></li>
+                                        <li><a href="safety.html">Safety Pratices</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="contact.html">Contact us</a></li>
                             </ul>
                         </nav>
                         <!-- mobile menu navigation end -->
                     </div>
                     <!-- mobile menu end -->
 
-                  
+
                 </div>
             </div>
         </aside>
@@ -212,7 +445,8 @@
                                 <h1 class="breadcrumb-title">Fumigation Technology</h1>
                                 <ul class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">Technologies for Fumigation</li>
+                                    <li class="breadcrumb-item active" aria-current="page">Technologies for Fumigation
+                                    </li>
                                 </ul>
                             </nav>
                         </div>
@@ -222,117 +456,201 @@
         </div>
         <!-- breadcrumb section end -->
 
-        <!-- blog section start -->
-        <section class="blog-area section-padding">
+        <!-- intro section start -->
+        <div class="service-details-area section-padding"
+            style="background: #ffffff; padding: 100px 0 60px; overflow: hidden;">
             <div class="container">
-                
-                    <div class="col-lg-12 order-1 order-lg-2">
-                        <!-- blog single post start -->
-                        <div class="blog-post-item">
-                            <!-- <div class="blog-thumb details-thumb"> -->
-                                <!-- <img src="assets/img/cargo.webp" alt="Cargo Fumigation"> -->
-                            <!-- </div> -->
-                            <div class="blog-content blog-details">
-                                <h2 class="blog-title">
-                                    Fumigation Technology
-                                </h2>
-								
-
-                           <blockquote>
-                                    <p class="text_color">Fumigation technology is the use of fumigants (chemical gases or vapors) to disinfect or control pests in a particular area, such as buildings, warehouses, ships, and soil. It is commonly applied in agriculture, pest control, food safety, and even in quarantine procedures. The process involves releasing a fumigant in a sealed space where it can permeate the area to kill or repel unwanted organisms.
-									</p></blockquote>
-									<p><b>1. Chemical Fumigation
-									Traditional Fumigants: </b>These include gases such as methyl bromide, phosphine, and sulfuryl fluoride. They are commonly used in agriculture and storage areas.
-									Fumigation Chambers/Enclosures: These are sealed environments where the fumigant is introduced, typically used in warehouses and shipping containers to eliminate pests and insects.</p>
-									<p><b>2. Heat Fumigation
-									Thermal Fumigation:</b> This method uses heat to raise the temperature inside a controlled environment, which can kill pests and pathogens. This can be particularly effective in treating wood or fabric items.</p>
-									<p><b>3. Electronic Fumigation (E-Fumigation)
-									Vaporizers and E-fumigants: </b>Some newer technologies use electronic vaporizers that release fumigant vapors at a controlled rate. This method is more environmentally friendly and often used for smaller-scale fumigations in homes or food storage facilities.</p>
-									<p><b>4. Low-Pressure Fumigation</b>
-									This method is typically used for fumigating bulk commodities like grains and legumes. It uses low pressures to help introduce the fumigants into the stored product while maintaining effectiveness.</p>
-									<p><b>5. Soil Fumigation</b>
-									In agriculture, soil fumigation involves applying fumigants to the soil to control pests, fungi, and weeds before planting crops. Modern techniques use specialized equipment to inject fumigants into the soil.</p>
-									<p><b>6. Fumigation in Transportation</b>
-									Fumigation is widely used in shipping to prevent the spread of pests across borders. Containers are sealed and fumigated with chemicals like phosphine gas, ensuring that no pests move between regions.</p>
-									
+                <div class="row align-items-center">
+                    <!-- Image Column (Left Side - Premium Tech Image Card) -->
+                    <div class="col-lg-5 order-1">
+                        <div class="about-image-card" style="height: 460px; margin-bottom: 30px;">
+                            <img src="assets/img/fumigation_technology_banner.png"
+                                alt="Star Fumigation Agencies - Fumigation Technology" />
+                            <div class="about-image-badge">
+                                <i class="fa fa-cogs"></i> Digital Monitoring
+                            </div>
+                            <div class="about-image-badge about-image-badge-dark" style="left: auto; right: 20px;">
+                                <i class="fa fa-line-chart"></i> Advanced Tech
                             </div>
                         </div>
-                        <!-- blog single post start -->
+                    </div>
 
-                                       
+                    <!-- Text Column (Right Side) -->
+                    <div class="col-lg-7 order-2" style="padding-left: 30px;">
+                        <div
+                            style="background: #ffffff; padding: 45px; border-radius: 24px; box-shadow: 0 15px 45px rgba(0,0,0,0.03); border: 1px solid rgba(0,0,0,0.04); position: relative; margin-bottom: 30px;">
+                            <div class="section-title" style="margin-bottom: 25px;">
+                                <span
+                                    style="color: #F7941D; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 2.5px; display: block; margin-bottom: 10px;">Methodology
+                                    Overview</span>
+                                <h2 class="title"
+                                    style="font-size: 34px; font-weight: 800; color: #222; line-height: 1.3; margin-bottom: 20px;">
+                                    Fumigation Technology</h2>
+                            </div>
+
+                            <blockquote
+                                style="background: rgba(247, 148, 29, 0.03); border-left: 5px solid #F7941D; padding: 25px; border-radius: 4px 12px 12px 4px; margin: 0;">
+                                <p class="text_color"
+                                    style="font-size: 16px; font-weight: 500; color: #222; line-height: 1.7; margin: 0; font-style: italic;">
+                                    Fumigation technology is the use of fumigants (chemical gases or vapors) to
+                                    disinfect or control pests in a particular area, such as buildings, warehouses,
+                                    ships, and soil. It is commonly applied in agriculture, pest control, food safety,
+                                    and even in quarantine procedures. The process involves releasing a fumigant in a
+                                    sealed space where it can permeate the area to kill or repel unwanted organisms.
+                                </p>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row justify-content-center" style="margin-top: 60px;">
+                    <div class="col-lg-8 text-center" style="margin-bottom: 50px;">
+                        <span
+                            style="color: #F7941D; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 2.5px; display: block; margin-bottom: 10px;">Technologies
+                            Employed</span>
+                        <h3 style="font-size: 28px; font-weight: 800; color: #222;">Core Fumigation Technologies</h3>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <!-- Tech Card 1 -->
+                    <!-- Tech Card 1 -->
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="tech-card">
+                            <div class="tech-card-image">
+                                <img src="assets/img/cargo1.png" alt="Chemical Fumigation" />
+                            </div>
+                            <div class="tech-card-body">
+                                <div class="tech-icon-wrapper">
+                                    <i class="fa fa-flask"></i>
+                                </div>
+                                <h5>1. Chemical Fumigation</h5>
+                                <ul class="tech-list">
+                                    <li><strong>Traditional Fumigants:</strong> These include gases such as methyl
+                                        bromide, phosphine, and sulfuryl fluoride, commonly used in agriculture and
+                                        storage areas.</li>
+                                    <li><strong>Fumigation Chambers/Enclosures:</strong> Sealed environments where the
+                                        fumigant is introduced, typically used in warehouses and shipping containers.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tech Card 2 -->
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="tech-card">
+                            <div class="tech-card-image">
+                                <img src="assets/img/pallet_fumigation.jpg" alt="Heat Fumigation" />
+                            </div>
+                            <div class="tech-card-body">
+                                <div class="tech-icon-wrapper">
+                                    <i class="fa fa-thermometer-half"></i>
+                                </div>
+                                <h5>2. Heat Fumigation</h5>
+                                <ul class="tech-list">
+                                    <li><strong>Thermal Fumigation:</strong> Uses heat to raise the temperature inside a
+                                        controlled environment, killing pests and pathogens.</li>
+                                    <li><strong>Application Scope:</strong> Particularly effective for treating wood
+                                        structures, pallets, packaging, and fabric items.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tech Card 3 -->
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="tech-card">
+                            <div class="tech-card-image">
+                                <img src="assets/img/starfumi_food.jpg" alt="Electronic Fumigation" />
+                            </div>
+                            <div class="tech-card-body">
+                                <div class="tech-icon-wrapper">
+                                    <i class="fa fa-bolt"></i>
+                                </div>
+                                <h5>3. Electronic Fumigation</h5>
+                                <ul class="tech-list">
+                                    <li><strong>Vaporizers & E-Fumigants:</strong> Employs electronic vaporizers to
+                                        release chemical gas vapors at a highly controlled, precise dosing rate.</li>
+                                    <li><strong>Eco-Friendly Advantage:</strong> A greener alternative often utilized
+                                        for small-scale residential or food storage facilities.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tech Card 4 -->
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="tech-card">
+                            <div class="tech-card-image">
+                                <img src="assets/img/storage.jpg" alt="Low-Pressure Fumigation" />
+                            </div>
+                            <div class="tech-card-body">
+                                <div class="tech-icon-wrapper">
+                                    <i class="fa fa-compress"></i>
+                                </div>
+                                <h5>4. Low-Pressure Fumigation</h5>
+                                <ul class="tech-list">
+                                    <li><strong>Low-Pressure Introduction:</strong> Uses lower pressures to help diffuse
+                                        the gaseous chemical deep into the core of dense commodities.</li>
+                                    <li><strong>Bulk Cargo Treating:</strong> Designed for large volumes of grain bins,
+                                        silos, legumes, and heavy bulk shipping items.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tech Card 5 -->
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="tech-card">
+                            <div class="tech-card-image">
+                                <img src="assets/img/pest_nematodes.png" alt="Soil Fumigation" />
+                            </div>
+                            <div class="tech-card-body">
+                                <div class="tech-icon-wrapper">
+                                    <i class="fa fa-leaf"></i>
+                                </div>
+                                <h5>5. Soil Fumigation</h5>
+                                <ul class="tech-list">
+                                    <li><strong>Agricultural Disinfection:</strong> Applies gaseous chemical treatments
+                                        to field soil to eradicate soil-borne fungi, weeds, and nematodes.</li>
+                                    <li><strong>Injection Equipment:</strong> Employs advanced, specialized injection
+                                        machinery to deposit fumigants directly into target root depths.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tech Card 6 -->
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="tech-card">
+                            <div class="tech-card-image">
+                                <img src="assets/img/cargo_fumigation_hero.png" alt="Fumigation in Transportation" />
+                            </div>
+                            <div class="tech-card-body">
+                                <div class="tech-icon-wrapper">
+                                    <i class="fa fa-truck"></i>
+                                </div>
+                                <h5>6. Fumigation in Transportation</h5>
+                                <ul class="tech-list">
+                                    <li><strong>Pre-Shipment Quarantine:</strong> Critical cross-border quarantine
+                                        control to halt target insect spread.</li>
+                                    <li><strong>Sealed Transport:</strong> Treats sealed shipping containers, cargo
+                                        hulls, and transit bays with gases like Phosphine prior to voyage.</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </section>
-        <!-- blog section end -->
+        </div>
+        <!-- intro section end -->
     </main>
 
 
-    <!-- footer section start -->
-    <footer>
-        <div class="footer-widget-area gray-bg section-padding">
-            <div class="container">
-                <div class="row mtn-20">
-                    <div class="col-lg-4 col-md-6">
-                        <!-- footer single widget start -->
-                        <div class="footer-single-widget mt-30">
-						  <a href="index.html">
-								<img src="assets/img/logo/starfumigation-logo.png" alt="Star Fumigation">
-                                </a>
-                           
-                            <div class="widget-body">
-                                <p class="desc">STAR FUMIGATION is one of the leading, reliable affordable Fumigation and Pest Control company in India. We are a professionally managed Organization with Qualified Professionals.</p>
-                            </div>
-                        </div>
-                        <!-- footer single widget start -->
-                    </div>
-					       <div class="col-lg-4 col-md-6">
-                        <!-- footer single widget start -->
-                        <div class="footer-single-widget mt-30">
-                            <h5 class="widget-title">QUICK <span>LINKS</span></h5>
-                            <div class="widget-body">
-                                <ul class="useful-links">
-                                    <li><a href="about.html">Our Company</a></li>
-									  <li><a href="cargo_fumigation.html">Our Services</a></li>
-                                    <li><a href="fumigation.html">Technical Information</a></li>
-                                    <li><a href="contact.html">Contact Us</a></li>
-                               
-                                </ul>
-                            </div>
-                        </div>
-                        <!-- footer single widget start -->
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <!-- footer single widget start -->
-                        <div class="footer-single-widget mt-30">
-                            <h5 class="widget-title">CONTACT <span>US</span></h5>
-                            <div class="widget-body">
-                                <h6 class="widget-title1">STAR FUMIGATION</h6>
-									 <p class="desc">NO. 42/87, 3RD FLOOR,
-									LINGHI CHETTY STREET,
-									CHENNAI-600001
-									</p>
-                                <ul class="contact-info">
-                                    <li>P: <a href="tel:99556688526">044-25220065, 25220075, 25220076</a></li>
-                                    
-                                    <li>E: <a href="mailto:info@starfumigation.com">info@starfumigation.com</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <!-- footer single widget start -->
-                    </div>
-                            
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <div class="container">
-                <div class="copyright-text text-center">
-                    <p>&copy; 2025 Star Fumigation. Developed by <a href="https://www.aatheshsoft.com/" target="_blank"><b>Aathesh Soft Solutions</b></a></p>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <!-- footer section start (loaded from global footer.js) -->
+    <div id="footer-placeholder"></div>
+    <script src="footer.js"></script>
     <!-- footer section end -->
 
 

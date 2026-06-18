@@ -36,6 +36,183 @@
     <!-- main style css -->
     <link rel="stylesheet" href="assets/css/style.css">
 
+    <!-- Custom Premium Styling for Image Sections & Pest Cards -->
+    <style>
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            14% { transform: scale(1.06); }
+            28% { transform: scale(1); }
+            42% { transform: scale(1.06); }
+            70% { transform: scale(1); }
+        }
+        @keyframes floatCard {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+            100% { transform: translateY(0); }
+        }
+        .about-image-card {
+            position: relative;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+            border: 1px solid rgba(0,0,0,0.08);
+            background: #ffffff;
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            animation: floatCard 3.5s ease-in-out infinite;
+        }
+        .about-image-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+        .about-image-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 20px 40px rgba(247, 148, 29, 0.12);
+            border-color: rgba(247, 148, 29, 0.3);
+            animation-play-state: paused;
+        }
+        .about-image-card:hover img {
+            transform: scale(1.03);
+        }
+        .about-image-badge {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background: #F7941D;
+            color: #ffffff;
+            padding: 8px 18px;
+            border-radius: 8px;
+            font-weight: 700;
+            box-shadow: 0 6px 15px rgba(247, 148, 29, 0.2);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 11px;
+            z-index: 2;
+            letter-spacing: 0.5px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            animation: heartbeat 1.8s infinite ease-in-out;
+        }
+        .about-image-badge-dark {
+            background: #222222;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+            animation-delay: 0.9s;
+        }
+        .pest-card {
+            background: #ffffff;
+            padding: 0;
+            overflow: hidden;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+            border: 1px solid rgba(0,0,0,0.04);
+            transition: all 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .pest-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(247, 148, 29, 0.08);
+            border-color: rgba(247, 148, 29, 0.2);
+        }
+        .pest-card-image {
+            height: 180px;
+            overflow: hidden;
+            position: relative;
+        }
+        .pest-card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .pest-card:hover .pest-card-image img {
+            transform: scale(1.08);
+        }
+        .pest-card-body {
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+        .pest-card-body .pest-icon-wrapper {
+            margin-top: -57px;
+            position: relative;
+            z-index: 2;
+            border: 4px solid #ffffff;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+        }
+        .pest-icon-wrapper {
+            background: rgba(247, 148, 29, 0.1);
+            color: #F7941D;
+            width: 55px;
+            height: 55px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            margin-bottom: 25px;
+            transition: all 0.3s ease;
+        }
+        .pest-card:hover .pest-icon-wrapper {
+            background: #F7941D;
+            color: #ffffff;
+            box-shadow: 0 5px 15px rgba(247, 148, 29, 0.25);
+        }
+        .pest-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            font-family: 'Open Sans', sans-serif;
+        }
+        .pest-list li {
+            position: relative;
+            padding-left: 26px;
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px dashed rgba(247, 148, 29, 0.15);
+            font-size: 14px;
+            color: #555;
+            line-height: 1.6;
+        }
+        .pest-list li:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+        .pest-list li::before {
+            content: "\f00c";
+            font-family: FontAwesome;
+            position: absolute;
+            left: 0;
+            top: 2px;
+            color: #F7941D;
+            font-size: 13px;
+            font-weight: 700;
+        }
+        .pest-list li strong {
+            color: #222;
+            font-weight: 700;
+            display: inline-block;
+            margin-right: 4px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
+        }
+        .pest-card-body h5 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 20px !important;
+            font-weight: 700 !important;
+            color: #222 !important;
+            margin-bottom: 22px !important;
+            position: relative;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #F7941D;
+            display: inline-block;
+        }
+    </style>
 </head>
 
 <body>
@@ -223,152 +400,247 @@
         </div>
         <!-- breadcrumb section end -->
 
-        <!-- blog section start -->
-        <section class="blog-area section-padding">
+        <!-- intro section start -->
+        <div class="service-details-area section-padding" style="background: #ffffff; padding: 100px 0 60px; overflow: hidden;">
             <div class="container">
-                
-                    <div class="col-lg-12 order-1 order-lg-2">
-                        <!-- blog single post start -->
-                        <div class="blog-post-item">
-                            <!-- <div class="blog-thumb details-thumb"> -->
-                                <!-- <img src="assets/img/cargo.webp" alt="Cargo Fumigation"> -->
-                            <!-- </div> -->
-                            <div class="blog-content blog-details">
-                                <h2 class="blog-title">
-                                    Pest Types
-									</h2>
-						<div class="row">
-							<div class="col-lg-6 order-1 order-lg-2">
-							<div class="service-details-img text-center">
-									<img src="assets/img/type-pest.jpg" alt="" />
-							</div>
-							</div>
-							<div class="col-lg-6 order-2 order-lg-1">		
-				
-                        <p>Pests can be categorized into different types based on the environment they infest and the damage they cause. Here are the main types of pests:</p>
-							 <h5 class="widget-title">1. Insects </h5>
-							<b>Ants: </b>Common household pests that can infest kitchens, pantries, and other areas in search of food.
-							Cockroaches: Known for spreading diseases and causing allergies, they prefer dark, moist areas like kitchens and bathrooms.</p>
-							<p><b>Bed Bugs:</b> These tiny pests feed on human blood and are notorious for infesting mattresses, bedding, and furniture.</p>
-							<p><b>Flies: </b>Including house flies, fruit flies, and drain flies, these pests are attracted to food waste, garbage, and organic matter.</p>
-							<p><b>Termites: </b>Wood-eating insects that cause extensive damage to wooden structures and furniture.
-							Mosquitoes: These pests are known for biting and can transmit diseases such as malaria, Zika virus, and West Nile virus.</p>
-							<p><b>Beetles: </b>This group includes pests like carpet beetles and pantry beetles that damage fabrics and stored food.</p>
-							</div>
-							 <div class="col-lg-12 order-3 order-lg-2">
-							<h5 class="widget-title">2. Rodents</h5>
-							<p><b>Rats: </b>These pests are known for infesting homes, chewing through wires and insulation, and spreading diseases like leptospirosis and hantavirus.</p>
-							<p><b>Mice: </b>Like rats, mice are notorious for causing damage to property and contaminating food with urine and droppings.</p>
-							<p><b>Squirrels: </b>Squirrels may enter attics and roofs, causing damage to structures and insulation.</p>
-							<h5 class="widget-title">3. Arachnids</h5>
-							<p><b>Spiders: </b>While most spiders are harmless, some can be venomous (like the black widow or brown recluse) and pose a danger to humans.</p>
-							<p><b>Scorpions: </b>Found in warmer climates, scorpions can sting and are dangerous to humans.</p>
-							<p><b>Ticks: </b>Ticks can spread diseases like Lyme disease and are often found in wooded or grassy areas.</p>
-							<h5 class="widget-title">4. Birds</h5>
-							<p><b>Pigeons: </b>These birds can cause damage to buildings with their droppings, which can erode stone and metal surfaces over time.</p>
-							<p><b>Starlings: </b>Known for their large flocks, they can damage crops and spread diseases.</p>
-							<p><b>Crows: </b>These birds can be a nuisance by raiding garbage and spreading disease.</p>
-							<h5 class="widget-title">5. Wildlife Pests</h5>
-							<p><b>Raccoons: </b>Raccoons often enter attics or basements and can cause damage to structures while searching for food.</p>
-							<p><b>Opossums: </b>These nocturnal animals may enter homes or attics and cause damage or leave waste behind.</p>
-							<p><b>Skunks: </b>Known for their distinctive odor, skunks may dig around in gardens or under homes.</p>
-							<h5 class="widget-title">6. Fungi & Mold</h5>
-							Mold: </b>Mold can cause damage to the structural integrity of homes, as well as health problems like respiratory issues and allergies.</p>
-							<p><b>Mildew: </b>A type of mold that thrives in damp environments, often found in bathrooms and basements.</p>
-							<h5 class="widget-title">7. Nematodes & Other Soil Pests</h5>
-							<p><b>Root-knot nematodes: </b>These microscopic worms attack plant roots, reducing their ability to absorb nutrients and water.</p>
-							<p><b>Weevils: </b>These pests are common in gardens, attacking plant roots or fruit.</p>
-							<h5 class="widget-title">8. Stored Product Pests</h5>
-							Grain Weevils: These pests infest dry food products, such as grains, flour, and rice, often found in pantries.
-							<p><b>Moths: </b>Clothes moths and pantry moths damage fabrics, clothes, and food stores.</P>
-							<h5 class="widget-title">9. Other Pests</h5>
-							<p><b>Lice: </b>These parasites are common in schools or areas with close human contact, feeding on human blood.</p>
-							<p><b>Fleas: </b>Fleas are most commonly found on pets but can also infest homes and bite humans.
-							<p><b>Silverfish: </b>These small, wingless insects thrive in damp environments and feed on books, wallpaper, and fabrics.</p>
-							</div>
-                          </div>
-						  </div>
-						
-                </div>
-									
+                <div class="row align-items-center">
+                    <!-- Image Column (Left Side - Premium Pest Image Card) -->
+                    <div class="col-lg-5 order-1">
+                        <div class="about-image-card" style="height: 460px; margin-bottom: 30px;">
+                            <img src="assets/img/pest-banner.png" alt="Star Fumigation Agencies - Pest Identification" />
+                            <div class="about-image-badge">
+                                <i class="fa fa-bug"></i> Pest Research
+                            </div>
+                            <div class="about-image-badge about-image-badge-dark" style="left: auto; right: 20px;">
+                                <i class="fa fa-search"></i> Species ID
                             </div>
                         </div>
-                        <!-- blog single post start -->
+                    </div>
+                    
+                    <!-- Text Column (Right Side) -->
+                    <div class="col-lg-7 order-2" style="padding-left: 30px;">
+                        <div style="background: #ffffff; padding: 45px; border-radius: 24px; box-shadow: 0 15px 45px rgba(0,0,0,0.03); border: 1px solid rgba(0,0,0,0.04); position: relative; margin-bottom: 30px;">
+                            <div class="section-title" style="margin-bottom: 25px;">
+                                <span style="color: #F7941D; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 2.5px; display: block; margin-bottom: 10px;">Classification</span>
+                                <h2 class="title" style="font-size: 34px; font-weight: 800; color: #222; line-height: 1.3; margin-bottom: 20px;">Pest Types</h2>
+                            </div>
+                            
+                            <blockquote style="background: rgba(247, 148, 29, 0.03); border-left: 5px solid #F7941D; padding: 25px; border-radius: 4px 12px 12px 4px; margin-bottom: 20px;">
+                                <p style="font-size: 15px; color: #222; font-weight: 600; line-height: 1.8; margin-bottom: 10px;">
+                                    Understanding Pest Taxonomy & Targeting Protocols
+                                </p>
+                                <p style="font-size: 14px; color: #555; line-height: 1.8; margin: 0;">
+                                    Pest control in international trade, agricultural warehousing, and food manufacturing demands scientific classification. Different species exhibit varying resistance to treatment methods and chemical concentrations. Identifying whether an infestation is insect-based, rodent-related, fungal, or nematological is the critical first step in defining the required dosage and fumigant.
+                                </p>
+                            </blockquote>
+                            <p style="font-size: 14px; color: #666; line-height: 1.8; margin-bottom: 15px;">
+                                Proper identification ensures compliance with strict international import-export guidelines (such as ISPM-15 standards). For example, wood-boring insects in timber packing materials demand Methyl Bromide quarantine fumigation, whereas stored-product pests in agricultural silos require Phosphine gas treatments to avoid food residue issues.
+                            </p>
+                            <p style="font-size: 14px; color: #666; line-height: 1.8; margin: 0;">
+                                Below is our comprehensive species catalog outlining the primary pest categories that Star Fumigation Agencies targets with customized, certified sanitization protocols:
+                            </p>
+                        </div>
+                    </div>
+                </div>
 
-                                       
+                <div class="row justify-content-center" style="margin-top: 60px;">
+                    <div class="col-lg-8 text-center" style="margin-bottom: 50px;">
+                        <span style="color: #F7941D; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 2.5px; display: block; margin-bottom: 10px;">Species Catalog</span>
+                        <h3 style="font-size: 28px; font-weight: 800; color: #222;">Primary Pest Classifications</h3>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <!-- Insects -->
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="pest-card">
+                            <div class="pest-card-image">
+                                <img src="assets/img/pest_insects.png" alt="Insects" />
+                            </div>
+                            <div class="pest-card-body">
+                                <div class="pest-icon-wrapper">
+                                    <i class="fa fa-bug"></i>
+                                </div>
+                                <h5>1. Insects</h5>
+                                <ul class="pest-list">
+                                    <li><strong>Ants:</strong> Common household pests that can infest kitchens, pantries, and other areas in search of food.</li>
+                                    <li><strong>Cockroaches:</strong> Known for spreading diseases and causing allergies, they prefer dark, moist areas like kitchens and bathrooms.</li>
+                                    <li><strong>Bed Bugs:</strong> These tiny pests feed on human blood and are notorious for infesting mattresses, bedding, and furniture.</li>
+                                    <li><strong>Flies:</strong> Including house flies, fruit flies, and drain flies, these pests are attracted to food waste, garbage, and organic matter.</li>
+                                    <li><strong>Termites:</strong> Wood-eating insects that cause extensive damage to wooden structures and furniture.</li>
+                                    <li><strong>Mosquitoes:</strong> These pests are known for biting and can transmit diseases such as malaria, Zika virus, and West Nile virus.</li>
+                                    <li><strong>Beetles:</strong> This group includes pests like carpet beetles and pantry beetles that damage fabrics and stored food.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Rodents -->
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="pest-card">
+                            <div class="pest-card-image">
+                                <img src="assets/img/pest_rodents.png" alt="Rodents" />
+                            </div>
+                            <div class="pest-card-body">
+                                <div class="pest-icon-wrapper">
+                                    <i class="fa fa-bolt"></i>
+                                </div>
+                                <h5>2. Rodents</h5>
+                                <ul class="pest-list">
+                                    <li><strong>Rats:</strong> These pests are known for infesting homes, chewing through wires and insulation, and spreading diseases like leptospirosis and hantavirus.</li>
+                                    <li><strong>Mice:</strong> Like rats, mice are notorious for causing damage to property and contaminating food with urine and droppings.</li>
+                                    <li><strong>Squirrels:</strong> Squirrels may enter attics and roofs, causing damage to structures and insulation.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Arachnids -->
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="pest-card">
+                            <div class="pest-card-image">
+                                <img src="assets/img/pest_arachnids.png" alt="Arachnids" />
+                            </div>
+                            <div class="pest-card-body">
+                                <div class="pest-icon-wrapper">
+                                    <i class="fa fa-bug"></i>
+                                </div>
+                                <h5>3. Arachnids</h5>
+                                <ul class="pest-list">
+                                    <li><strong>Spiders:</strong> While most spiders are harmless, some can be venomous (like the black widow or brown recluse) and pose a danger to humans.</li>
+                                    <li><strong>Scorpions:</strong> Found in warmer climates, scorpions can sting and are dangerous to humans.</li>
+                                    <li><strong>Ticks:</strong> Ticks can spread diseases like Lyme disease and are often found in wooded or grassy areas.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Birds -->
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="pest-card">
+                            <div class="pest-card-image">
+                                <img src="assets/img/pest_birds.png" alt="Birds" />
+                            </div>
+                            <div class="pest-card-body">
+                                <div class="pest-icon-wrapper">
+                                    <i class="fa fa-twitter"></i>
+                                </div>
+                                <h5>4. Birds</h5>
+                                <ul class="pest-list">
+                                    <li><strong>Pigeons:</strong> These birds can cause damage to buildings with their droppings, which can erode stone and metal surfaces over time.</li>
+                                    <li><strong>Starlings:</strong> Known for their large flocks, they can damage crops and spread diseases.</li>
+                                    <li><strong>Crows:</strong> These birds can be a nuisance by raiding garbage and spreading disease.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Wildlife Pests -->
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="pest-card">
+                            <div class="pest-card-image">
+                                <img src="assets/img/pest_wildlife.png" alt="Wildlife Pests" />
+                            </div>
+                            <div class="pest-card-body">
+                                <div class="pest-icon-wrapper">
+                                    <i class="fa fa-paw"></i>
+                                </div>
+                                <h5>5. Wildlife Pests</h5>
+                                <ul class="pest-list">
+                                    <li><strong>Raccoons:</strong> Raccoons often enter attics or basements and can cause damage to structures while searching for food.</li>
+                                    <li><strong>Opossums:</strong> These nocturnal animals may enter homes or attics and cause damage or leave waste behind.</li>
+                                    <li><strong>Skunks:</strong> Known for their distinctive odor, skunks may dig around in gardens or under homes.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Fungi & Mold -->
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="pest-card">
+                            <div class="pest-card-image">
+                                <img src="assets/img/pest_fungi.png" alt="Fungi & Mold" />
+                            </div>
+                            <div class="pest-card-body">
+                                <div class="pest-icon-wrapper">
+                                    <i class="fa fa-tint"></i>
+                                </div>
+                                <h5>6. Fungi & Mold</h5>
+                                <ul class="pest-list">
+                                    <li><strong>Mold:</strong> Mold can cause damage to the structural integrity of homes, as well as health problems like respiratory issues and allergies.</li>
+                                    <li><strong>Mildew:</strong> A type of mold that thrives in damp environments, often found in bathrooms and basements.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Nematodes & Other Soil Pests -->
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="pest-card">
+                            <div class="pest-card-image">
+                                <img src="assets/img/pest_nematodes.png" alt="Nematodes & Other Soil Pests" />
+                            </div>
+                            <div class="pest-card-body">
+                                <div class="pest-icon-wrapper">
+                                    <i class="fa fa-leaf"></i>
+                                </div>
+                                <h5>7. Nematodes & Other Soil Pests</h5>
+                                <ul class="pest-list">
+                                    <li><strong>Root-knot nematodes:</strong> These microscopic worms attack plant roots, reducing their ability to absorb nutrients and water.</li>
+                                    <li><strong>Weevils:</strong> These pests are common in gardens, attacking plant roots or fruit.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Stored Product Pests -->
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="pest-card">
+                            <div class="pest-card-image">
+                                <img src="assets/img/pest_stored.png" alt="Stored Product Pests" />
+                            </div>
+                            <div class="pest-card-body">
+                                <div class="pest-icon-wrapper">
+                                    <i class="fa fa-shopping-basket"></i>
+                                </div>
+                                <h5>8. Stored Product Pests</h5>
+                                <ul class="pest-list">
+                                    <li><strong>Grain Weevils:</strong> These pests infest dry food products, such as grains, flour, and rice, often found in pantries.</li>
+                                    <li><strong>Moths:</strong> Clothes moths and pantry moths damage fabrics, clothes, and food stores.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Other Pests -->
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="pest-card">
+                            <div class="pest-card-image">
+                                <img src="assets/img/pest_other.jpg" alt="Other Pests" />
+                            </div>
+                            <div class="pest-card-body">
+                                <div class="pest-icon-wrapper">
+                                    <i class="fa fa-asterisk"></i>
+                                </div>
+                                <h5>9. Other Pests</h5>
+                                <ul class="pest-list">
+                                    <li><strong>Lice:</strong> These parasites are common in schools or areas with close human contact, feeding on human blood.</li>
+                                    <li><strong>Fleas:</strong> Fleas are most commonly found on pets but can also infest homes and bite humans.</li>
+                                    <li><strong>Silverfish:</strong> These small, wingless insects thrive in damp environments and feed on books, wallpaper, and fabrics.</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </section>
-        <!-- blog section end -->
+        </div>
+        <!-- intro section end -->
     </main>
 
 
-    <!-- footer section start -->
-    <footer>
-        <div class="footer-widget-area gray-bg section-padding">
-            <div class="container">
-                <div class="row mtn-20">
-                    <div class="col-lg-4 col-md-6">
-                        <!-- footer single widget start -->
-                        <div class="footer-single-widget mt-30">
-						  <a href="index.html">
-								<img src="assets/img/logo/starfumigation-logo.png" alt="Star Fumigation">
-                                </a>
-                           
-                            <div class="widget-body">
-                                <p class="desc">STAR FUMIGATION is one of the leading, reliable affordable Fumigation and Pest Control company in India. We are a professionally managed Organization with Qualified Professionals.</p>
-                            </div>
-                        </div>
-                        <!-- footer single widget start -->
-                    </div>
-					       <div class="col-lg-4 col-md-6">
-                        <!-- footer single widget start -->
-                        <div class="footer-single-widget mt-30">
-                            <h5 class="widget-title">QUICK <span>LINKS</span></h5>
-                            <div class="widget-body">
-                                <ul class="useful-links">
-                                    <li><a href="about.html">Our Company</a></li>
-									  <li><a href="cargo_fumigation.html">Our Services</a></li>
-                                    <li><a href="fumigation.html">Technical Information</a></li>
-                                    <li><a href="contact.html">Contact Us</a></li>
-                               
-                                </ul>
-                            </div>
-                        </div>
-                        <!-- footer single widget start -->
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <!-- footer single widget start -->
-                        <div class="footer-single-widget mt-30">
-                            <h5 class="widget-title">CONTACT <span>US</span></h5>
-                            <div class="widget-body">
-                                <h6 class="widget-title1">STAR FUMIGATION</h6>
-									 <p class="desc">NO. 42/87, 3RD FLOOR,
-									LINGHI CHETTY STREET,
-									CHENNAI-600001
-									</p>
-                                <ul class="contact-info">
-                                    <li>P: <a href="tel:99556688526">044-25220065, 25220075, 25220076</a></li>
-                                    
-                                    <li>E: <a href="mailto:info@starfumigation.com">info@starfumigation.com</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <!-- footer single widget start -->
-                    </div>
-                            
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <div class="container">
-                <div class="copyright-text text-center">
-                    <p>&copy; 2025 Star Fumigation. Developed by <a href="https://www.aatheshsoft.com/" target="_blank"><b>Aathesh Soft Solutions</b></a></p>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <!-- footer section start (loaded from global footer.js) -->
+    <div id="footer-placeholder"></div>
+    <script src="footer.js"></script>
     <!-- footer section end -->
 
 

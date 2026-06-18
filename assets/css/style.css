@@ -1923,7 +1923,7 @@ only screen and (max-width: 767.98px) {
 }
 
 .odometer {
-    margin-left: -25px;
+    margin-left: 0;
 }
 
 .odometer-inside {
@@ -1931,10 +1931,8 @@ only screen and (max-width: 767.98px) {
 }
 
 .odometer-inside::after {
-    top: 0;
-    left: 100%;
-    content: '+';
-    position: absolute;
+    display: none;
+    content: none;
 }
 
 /*------ counter up end ------*/
@@ -2668,56 +2666,98 @@ only screen and (max-width: 767.98px) {
 }
 
 .service-item {
-    padding: 55px 30px;
-    text-align: center;
-    border-radius: 5px;
-    -webkit-transition: 0.4s;
-    -o-transition: 0.4s;
-    transition: 0.4s;
-    -webkit-box-shadow: 0px 0px 12px -2px rgba(1, 26, 72, 0.1);
-    box-shadow: 0px 0px 12px -2px rgba(1, 26, 72, 0.1);
+    background: #ffffff;
+    padding: 40px 35px;
+    border-radius: 16px;
+    -webkit-box-shadow: 0 10px 35px rgba(0,0,0,0.02);
+    box-shadow: 0 10px 35px rgba(0,0,0,0.02);
+    border: 1px solid rgba(0,0,0,0.04);
+    border-top: 4px solid #F7941D;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
 }
 
 @media only screen and (max-width: 479.98px) {
     .service-item {
-        padding: 35px 15px;
+        padding: 30px 20px;
     }
 }
 
 .service-item p {
-    -webkit-transition: 0.4s;
-    -o-transition: 0.4s;
-    transition: 0.4s;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    color: #666666;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    flex-grow: 1;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .service-item .read-more {
-    color: #222222;
-    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: #F7941D;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.service-item .read-more b {
+    color: inherit;
+    font-weight: 700;
+}
+
+.service-item .read-more::after {
+    content: '\f101';
+    font-family: FontAwesome;
     font-size: 14px;
-    font-weight: 500;
-    font-family: "Montserrat", sans-serif;
-    margin-top: 8px;
-    -webkit-transition: 0.4s;
-    -o-transition: 0.4s;
-    transition: 0.4s;
-}
-
-.service-item .read-more i {
-    padding-left: 5px;
-}
-
-.service-item .read-more:hover {
-    letter-spacing: 1.2px;
+    color: inherit;
+    -webkit-transition: -webkit-transform 0.3s ease;
+    transition: -webkit-transform 0.3s ease;
+    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, -webkit-transform 0.3s ease;
 }
 
 .service-item:hover {
-    background-color: #F7941D;
+    background-color: #ffffff;
+    -webkit-transform: translateY(-8px);
+    -ms-transform: translateY(-8px);
+    transform: translateY(-8px);
+    -webkit-box-shadow: 0 20px 45px rgba(247, 148, 29, 0.12);
+    box-shadow: 0 20px 45px rgba(247, 148, 29, 0.12);
+    border-color: rgba(247, 148, 29, 0.2);
+    border-top-color: #222222;
 }
 
-.service-item:hover .service-title,
-.service-item:hover .read-more,
+.service-item:hover .service-title {
+    color: #F7941D;
+}
+
 .service-item:hover p {
-    color: #fff;
+    color: #666666;
+}
+
+.service-item:hover .read-more {
+    color: #222222;
+}
+
+.service-item:hover .read-more::after {
+    -webkit-transform: translateX(4px);
+    -ms-transform: translateX(4px);
+    transform: translateX(4px);
 }
 
 .service-item__style-2 {
@@ -2750,18 +2790,16 @@ only screen and (max-width: 767.98px) {
 }
 
 .service-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    color: #222222;
+    margin-bottom: 15px;
     cursor: pointer;
-    line-height: 1;
-    padding-bottom: 23px;
-    -webkit-transition: 0.4s;
-    -o-transition: 0.4s;
-    transition: 0.4s;
-}
-
-.service-title {
-    -webkit-transition: 0.4s;
-    -o-transition: 0.4s;
-    transition: 0.4s;
+    line-height: 1.2;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 /*------ service area end ------*/
