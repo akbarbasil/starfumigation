@@ -165,7 +165,7 @@
                 }
             }
         </style>
-        <div class="breadcrumb-area bg-img" data-bg="assets/img/bg/breadcrumb.jpg">
+        <div class="breadcrumb-area bg-img" data-bg="assets/images/bg/breadcrumb.jpg">
             <div class="container">
                 <div class="row">
                     <div class="col-12">

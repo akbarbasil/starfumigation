@@ -197,7 +197,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="footer-single-widget">
                         <a href="index.html" class="footer-logo-container">
-                            <img src="assets/img/logo/starfumigation-logo.png" alt="Star Fumigation">
+                            <img src="assets/images/logo/starfumigation-logo.png" alt="Star Fumigation">
                         </a>
                         <p class="desc-text">STAR FUMIGATION AGENCIES is one of India's leading, highly reliable, and certified providers of professional fumigation and quarantine pest management services. Operating under strict global compliance protocols, we protect your cargo, facilities, and commodities.</p>
                         
@@ -218,6 +218,7 @@
                         <h5 class="footer-widget-title">Quick Links</h5>
                         <ul class="footer-links">
                             <li><a href="about.html"><i class="fa fa-angle-right"></i> Our Company</a></li>
+                            <li><a href="gallery.html"><i class="fa fa-angle-right"></i> Gallery</a></li>
                             <li><a href="cargo_fumigation.html"><i class="fa fa-angle-right"></i> Our Services</a></li>
                             <li><a href="fumigation.html"><i class="fa fa-angle-right"></i> Technical Info</a></li>
                             <li><a href="contact.html"><i class="fa fa-angle-right"></i> Contact Us</a></li>

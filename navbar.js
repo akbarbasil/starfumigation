@@ -13,6 +13,7 @@
     // Determine active tabs
     var isHomeActive = (page === 'index.html');
     var isAboutActive = (page === 'about.html');
+    var isGalleryActive = (page === 'gallery.html');
     var isContactActive = (page === 'contact.html');
 
     var servicePages = [
@@ -435,7 +436,7 @@
                             <!-- logo area start -->
                             <div class="brand-logo">
                                 <a href="index.html">
-                                    <img src="assets/img/logo/starfumigation-logo.png" alt="Star Fumigation">
+                                    <img src="assets/images/logo/starfumigation-logo.png" alt="Star Fumigation">
                                 </a>
                             </div>
                             <!-- logo area end -->
@@ -447,6 +448,7 @@
                                     <ul>
                                         <li class="${isHomeActive ? 'active' : ''}"><a href="index.html">Home</a></li>
                                         <li class="${isAboutActive ? 'active' : ''}"><a href="about.html">About Us</a></li>
+                                        <li class="${isGalleryActive ? 'active' : ''}"><a href="gallery.html">Gallery</a></li>
                                         <li class="${isServicesActive ? 'active' : ''}"><a href="#">Services <i class="fa fa-angle-down"></i></a>
                                             <ul class="dropdown">
                                                 <li class="${page === 'cargo_fumigation.html' ? 'active' : ''}"><a href="cargo_fumigation.html">Cargo Fumigation</a></li>
@@ -488,7 +490,7 @@
                         <div class="mobile-main-header">
                             <div class="mobile-logo">
                                 <a href="index.html">
-                                    <img src="assets/img/logo/starfumigation-logo.png" alt="Star Fumigation">
+                                    <img src="assets/images/logo/starfumigation-logo.png" alt="Star Fumigation">
                                 </a>
                             </div>
                             <div class="mobile-menu-toggler">
@@ -521,7 +523,8 @@
                         <nav>
                             <ul class="mobile-menu">
                                 <li class="${isHomeActive ? 'active' : ''}"><a href="index.html">Home</a></li>
-                                <li class="${isAboutActive ? 'active' : ''}"><a href="about.html">About Us</a></li>
+                                        <li class="${isAboutActive ? 'active' : ''}"><a href="about.html">About Us</a></li>
+                                        <li class="${isGalleryActive ? 'active' : ''}"><a href="gallery.html">Gallery</a></li>
                                 <li class="menu-item-has-children ${isServicesActive ? 'active' : ''}"><a href="#">Services </a>
                                     <ul class="dropdown">
                                         <li class="${page === 'cargo_fumigation.html' ? 'active' : ''}"><a href="cargo_fumigation.html">Cargo Fumigation</a></li>

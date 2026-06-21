@@ -1,0 +1,402 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Star Fumigation - Photo Gallery</title>
+    <meta name="robots" content="noindex, follow" />
+    <meta
+        content="STAR FUMIGATION AGENCIES is one of the leading, reliable affordable Fumigation and Pest Control company in India. We are a professionally managed Organization with Qualified Professionals."
+        name="description" />
+    <meta
+        content=" STAR FUMIGATION AGENCIES, Empty Container Loaded Containers Fumigation, Air LCL Cargo Fumigation, Warehouse Fumigation,Mills Fumigation, Shipholds Fumigation, Timber Treatment Fumigation, Prophylactic Treatment for warehouse, Anti Fungal treatment for pallets used in export packing, Food Processing Machinery Fumigation, chennai,star fumigation in chennai,Tamilnadu,india,Aathesh Soft Solutions"
+        name=Keywords />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/png" href="assets/images/favicon.png">
+
+    <!-- CSS
+	============================================ -->
+    <!-- google fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,500,500i,600,700,800,900%7COpen+Sans:300,300i,400,400i,600,700&display=swap"
+        rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
+    <!-- Font-awesome CSS -->
+    <link rel="stylesheet" href="assets/css/vendor/font-awesome.min.css">
+    <!-- Slick slider css -->
+    <link rel="stylesheet" href="assets/css/plugins/slick.min.css">
+    <!-- Odometer css -->
+    <link rel="stylesheet" href="assets/css/plugins/odometer.min.css">
+    <!-- animate css -->
+    <link rel="stylesheet" href="assets/css/plugins/animate.css">
+    <!-- Nice Select css -->
+    <link rel="stylesheet" href="assets/css/plugins/nice-select.css">
+    <!-- magnific-popup css -->
+    <link rel="stylesheet" href="assets/css/plugins/magnific-popup.css">
+    <!-- youtube video player -->
+    <link rel="stylesheet" href="assets/css/plugins/YTPlayer.min.css">
+    <!-- main style css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Premium Gallery Styling -->
+    <style>
+        :root {
+            --primary: #F7941D;
+            --primary-rgb: 247, 148, 29;
+            --dark: #0b0f19;
+            --dark-light: #1e293b;
+            --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        .gallery-section-wrapper {
+            padding: 90px 0;
+            background: #fdfdfd;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            background: #000;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            border: 1px solid rgba(0, 0, 0, 0.04);
+            height: 280px;
+            transition: var(--transition);
+        }
+
+        .gallery-item img,
+        .gallery-item video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+            opacity: 0.9;
+        }
+
+        /* Custom Rotation for Video Card Preview & Popup Modal Video.
+           Adjust the rotation degrees (90deg, 180deg, 270deg) and scaling (scale(1.4)) as needed if the video was filmed sideways. */
+        .video-item video {
+            transform: rotate(0deg);
+            transform-origin: center center;
+        }
+
+        #popup-video {
+            transform: rotate(0deg);
+            transform-origin: center center;
+        }
+
+        /* Hover Overlay & Zoom Effects */
+        .gallery-item:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 15px 35px rgba(247, 148, 29, 0.15);
+            border-color: rgba(247, 148, 29, 0.2);
+        }
+
+        .gallery-item:hover img,
+        .gallery-item:hover video {
+            transform: scale(1.08);
+            opacity: 0.7;
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, rgba(11, 15, 25, 0.85) 0%, rgba(11, 15, 25, 0.2) 70%, transparent 100%);
+            display: flex;
+            align-items: flex-end;
+            padding: 25px;
+            opacity: 0;
+            transition: var(--transition);
+            z-index: 2;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .gallery-info {
+            transform: translateY(15px);
+            transition: var(--transition);
+            width: 100%;
+        }
+
+        .gallery-item:hover .gallery-info {
+            transform: translateY(0);
+        }
+
+        .gallery-info h5 {
+            color: #ffffff;
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .gallery-info p {
+            color: #cbd5e1;
+            font-size: 13px;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .gallery-zoom-icon {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 48px;
+            height: 48px;
+            background: var(--primary);
+            color: #ffffff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            opacity: 0;
+            transform: scale(0.8);
+            transition: var(--transition);
+            z-index: 3;
+            box-shadow: 0 4px 15px rgba(247, 148, 29, 0.4);
+            text-decoration: none;
+        }
+
+        .gallery-item:hover .gallery-zoom-icon {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .gallery-zoom-icon:hover {
+            background: #ffffff;
+            color: var(--primary);
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 50px auto;
+        }
+
+        .section-header span {
+            color: var(--primary);
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            display: block;
+            margin-bottom: 12px;
+        }
+
+        .section-header h2 {
+            font-size: 36px;
+            font-weight: 800;
+            color: var(--dark);
+            line-height: 1.2;
+        }
+
+        @media (max-width: 767.98px) {
+            .gallery-section-wrapper {
+                padding: 60px 0;
+            }
+
+            .section-header h2 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Start Header Area -->
+    <!-- header section start (loaded from global navbar.js) -->
+    <div id="header-placeholder"></div>
+    <script src="navbar.js"></script>
+    <!-- header section end -->
+    <!-- end Header Area -->
+
+    <main>
+        <!-- breadcrumb section start -->
+        <div id="breadcrumb-placeholder" data-title="Photo Gallery" data-current="Gallery"></div>
+        <script src="breadcrumb.js"></script>
+        <!-- breadcrumb section end -->
+
+        <!-- Gallery Section Start -->
+        <section class="gallery-section-wrapper">
+            <div class="container">
+                <div class="section-header">
+                    <span>Our Operations</span>
+                    <h2>Work & Treatment Gallery</h2>
+                </div>
+
+                <!-- Gallery Grid of 13 Images -->
+                <div class="gallery-grid" id="gallery-container">
+                    <!-- Image Cards will be rendered dynamically so the user can easily add/remove by changing image count -->
+                </div>
+            </div>
+        </section>
+        <!-- Gallery Section End -->
+    </main>
+
+    <!-- footer section start (loaded from global footer.js) -->
+    <div id="footer-placeholder"></div>
+    <script src="footer.js"></script>
+    <!-- footer section end -->
+
+    <!-- JS
+============================================ -->
+    <!-- Modernizer JS -->
+    <script src="assets/js/vendor/modernizr-3.6.0.min.js"></script>
+    <!-- jQuery JS -->
+    <script src="assets/js/vendor/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="assets/js/vendor/bootstrap.bundle.min.js"></script>
+    <!-- youtube video player -->
+    <script src="assets/js/plugins/YTPlayer.min.js"></script>
+    <!-- magnific-popup -->
+    <script src="assets/js/plugins/magnific-popup.min.js"></script>
+    <!-- slick Slider JS -->
+    <script src="assets/js/plugins/slick.min.js"></script>
+    <!-- Nice Select JS -->
+    <script src="assets/js/plugins/nice-select.min.js"></script>
+    <!-- odometer js -->
+    <script src="assets/js/plugins/odometer.min.js"></script>
+    <!-- appear js -->
+    <script src="assets/js/plugins/appear.min.js"></script>
+    <!-- mailchimp active js -->
+    <script src="assets/js/plugins/ajaxchimp.js"></script>
+    <!-- contact form dynamic js -->
+    <script src="assets/js/plugins/ajax-mail.js"></script>
+    <!-- google map api -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2D8wrWMY3XZnuHO6C31uq90JiuaFzGws"></script>
+    <!-- google map active js -->
+    <script src="assets/js/plugins/google-map.js"></script>
+    <!-- Main JS -->
+    <script src="assets/js/main.js"></script>
+
+    <!-- Render Gallery & Initialize Lightbox -->
+    <script>
+        $(document).ready(function () {
+            // Total number of images in assets/images/gallery
+            // The user can change this number or delete files, and this script handles rendering dynamically!
+            const totalImages = 24;
+            const galleryContainer = $('#gallery-container');
+
+            // Prepend the Operations Video as the first item in the gallery
+            const videoItem = `
+                <div class="gallery-item video-item">
+                    <video src="assets/images/gallery/v1.mp4" autoplay loop muted playsinline style="width: 100%; height: 100%; object-fit: cover; opacity: 0.9; display: block; transition: transform 0.6s ease;"></video>
+                    <a href="#video-modal" class="gallery-zoom-icon video-popup" title="Star Fumigation Operations Video">
+                        <i class="fa fa-play"></i>
+                    </a>
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h5>Operations Video</h5>
+                        </div>
+                    </div>
+                </div>
+            `;
+            galleryContainer.append(videoItem);
+
+            const imageTitles = {
+                1: "",
+                2: "",
+                3: "",
+                4: "",
+                5: "",
+                6: "",
+                7: "",
+                8: "",
+                9: "",
+                10: "",
+                11: "",
+                12: "",
+                13: "",
+                14: "",
+                15: "",
+                16: "",
+                17: "",
+                18: "",
+                19: "",
+                20: "",
+                21: "",
+                22: "",
+                23: "",
+                24: ""
+            };
+
+            for (let i = 1; i <= totalImages; i++) {
+                const title = imageTitles[i] || `Gallery ${i}`;
+                const imgPath = `assets/images/gallery/${i}.jpg`;
+
+                const galleryItem = `
+                    <div class="gallery-item">
+                        <img src="${imgPath}" alt="${title}" onerror="this.closest('.gallery-item').style.display='none';" />
+                        <a href="${imgPath}" class="gallery-zoom-icon img-popup" title="${title}">
+                            <i class="fa fa-search-plus"></i>
+                        </a>
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h5>${title}</h5>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                galleryContainer.append(galleryItem);
+            }
+
+            // Initialize Magnific Popup for Gallery Lightbox
+            $('.gallery-grid').magnificPopup({
+                delegate: '.img-popup',
+                type: 'image',
+                gallery: {
+                    enabled: true,
+                    navigateByImgClick: true,
+                    preload: [0, 1]
+                },
+                image: {
+                    titleSrc: function (item) {
+                        return item.el.attr('title');
+                    }
+                }
+            });
+
+            // Initialize Magnific Popup for local Operations Video popup
+            $('.video-popup').magnificPopup({
+                type: 'inline',
+                midClick: true,
+                callbacks: {
+                    open: function () {
+                        $('#popup-video').get(0).play();
+                    },
+                    close: function () {
+                        $('#popup-video').get(0).pause();
+                        $('#popup-video').get(0).currentTime = 0;
+                    }
+                }
+            });
+        });
+    </script>
+
+    <!-- Video Popup Modal Structure -->
+    <div id="video-modal" class="white-popup mfp-hide"
+        style="max-width: 800px; margin: 40px auto; background: #000; padding: 10px; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.5);">
+        <video id="popup-video" src="assets/images/gallery/v1.mp4" controls
+            style="width: 100%; display: block; border-radius: 8px;"></video>
+    </div>
+</body>
+
+</html>
