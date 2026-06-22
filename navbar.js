@@ -12,7 +12,7 @@
 
     // Determine active tabs
     var isHomeActive = (page === 'index.html');
-    var isAboutActive = (page === 'about.html');
+    var isAboutActive = (page === 'about.html' || page === 'why_choose_fumigation.html' || page === 'chairmans_message.html');
     var isGalleryActive = (page === 'gallery.html');
     var isContactActive = (page === 'contact.html');
 
@@ -133,10 +133,12 @@
             background: rgba(255, 255, 255, 0.98) !important;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06) !important;
             padding: 12px 0 !important;
+            z-index: 9999 !important;
         }
 
         .brand-logo img {
-            max-height: 80px !important;
+            height: 90px !important;
+            width: auto !important;
             transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
         }
 
@@ -146,7 +148,8 @@
         }
 
         .header-main-area.is-sticky .brand-logo img {
-            max-height: 66px !important;
+            height: 75px !important;
+            width: auto !important;
         }
 
         /* Nav links & Active states */
@@ -166,16 +169,16 @@
         .main-menu ul li {
             position: relative !important;
             padding: 8px 0 !important;
-            margin: 0 16px !important;
+            margin: 0 10px !important;
         }
 
         .main-menu ul li a {
             font-family: 'Montserrat', sans-serif !important;
-            font-size: 14px !important;
+            font-size: 13px !important;
             font-weight: 700 !important;
             color: #1e293b !important;
             text-transform: uppercase !important;
-            letter-spacing: 0.5px !important;
+            letter-spacing: 0.2px !important;
             padding: 8px 0 !important;
             transition: all 0.3s ease !important;
             display: inline-flex !important;
@@ -296,7 +299,7 @@
         }
 
         .mobile-logo img {
-            max-height: 60px !important;
+            max-height: 100px !important;
             transition: all 0.4s ease !important;
         }
 
@@ -411,16 +414,15 @@
                     <div class="row">
                         <div class="col-lg-8">
                             <ul class="header-top-left">
-                                <li><i class="fa fa-headphones"></i><a href="tel:25240082">044-25220065, 25220075, 25220076</a></li>
+                                <li><i class="fa fa-headphones"></i><a href="tel:25220065">044-25220065, 25220075, 25220076</a></li>
                                 <li><i class="fa fa-envelope-open"></i><a href="mailto:info@starfumigation.com">info@starfumigation.com</a></li>
                             </ul>
                         </div>
                         <div class="col-lg-4">
                             <div class="header-social-link text-end">
-                                <a href="#" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
-                                <a href="#" aria-label="Twitter"><i class="fa fa-twitter"></i></a>
-                                <a href="#" aria-label="Pinterest"><i class="fa fa-pinterest"></i></a>
-                                <a href="#" aria-label="Vimeo"><i class="fa fa-vimeo"></i></a>
+                                <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
+                                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fa fa-twitter"></i></a>
+                                <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa fa-instagram"></i></a>
                             </div>
                         </div>
                     </div>
@@ -432,22 +434,27 @@
             <div class="header-main-area sticky">
                 <div class="container">
                     <div class="row align-items-center">
-                        <div class="col-lg-3">
+                        <div class="col-lg-4">
                             <!-- logo area start -->
                             <div class="brand-logo">
                                 <a href="index.html">
-                                    <img src="assets/images/logo/starfumigation-logo.png" alt="Star Fumigation">
+                                    <img src="assets/images/logo/1.png" alt="Star Fumigation">
                                 </a>
                             </div>
                             <!-- logo area end -->
                         </div>
-                        <div class="col-lg-9">
+                        <div class="col-lg-8">
                             <div class="main-menu-inner">
                                 <!-- main menu navbar start -->
                                 <nav class="main-menu">
                                     <ul>
                                         <li class="${isHomeActive ? 'active' : ''}"><a href="index.html">Home</a></li>
-                                        <li class="${isAboutActive ? 'active' : ''}"><a href="about.html">About Us</a></li>
+                                        <li class="${isAboutActive ? 'active' : ''}"><a href="#">About Us <i class="fa fa-angle-down"></i></a>
+                                            <ul class="dropdown">
+                                                <li class="${page === 'why_choose_fumigation.html' ? 'active' : ''}"><a href="why_choose_fumigation.html">Why Choose Fumigation</a></li>
+                                                <li class="${page === 'chairmans_message.html' ? 'active' : ''}"><a href="chairmans_message.html">Chairman's Message</a></li>
+                                            </ul>
+                                        </li>
                                         <li class="${isGalleryActive ? 'active' : ''}"><a href="gallery.html">Gallery</a></li>
                                         <li class="${isServicesActive ? 'active' : ''}"><a href="#">Services <i class="fa fa-angle-down"></i></a>
                                             <ul class="dropdown">
@@ -490,7 +497,7 @@
                         <div class="mobile-main-header">
                             <div class="mobile-logo">
                                 <a href="index.html">
-                                    <img src="assets/images/logo/starfumigation-logo.png" alt="Star Fumigation">
+                                    <img src="assets/images/logo/1.png" alt="Star Fumigation">
                                 </a>
                             </div>
                             <div class="mobile-menu-toggler">
@@ -523,7 +530,12 @@
                         <nav>
                             <ul class="mobile-menu">
                                 <li class="${isHomeActive ? 'active' : ''}"><a href="index.html">Home</a></li>
-                                        <li class="${isAboutActive ? 'active' : ''}"><a href="about.html">About Us</a></li>
+                                        <li class="menu-item-has-children ${isAboutActive ? 'active' : ''}"><a href="#">About Us</a>
+                                            <ul class="dropdown">
+                                                <li class="${page === 'why_choose_fumigation.html' ? 'active' : ''}"><a href="why_choose_fumigation.html">Why Choose Fumigation</a></li>
+                                                <li class="${page === 'chairmans_message.html' ? 'active' : ''}"><a href="chairmans_message.html">Chairman's Message</a></li>
+                                            </ul>
+                                        </li>
                                         <li class="${isGalleryActive ? 'active' : ''}"><a href="gallery.html">Gallery</a></li>
                                 <li class="menu-item-has-children ${isServicesActive ? 'active' : ''}"><a href="#">Services </a>
                                     <ul class="dropdown">

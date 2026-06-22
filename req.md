@@ -1,4 +1,4 @@
-# Star Fumigation Agencies - Website Requirements & Context
+# STAR FUMIGATION - Website Requirements & Context
 
 ## Reference Websites
 - https://www.fumigationservice.com/
@@ -6,7 +6,7 @@
 - https://www.pestfree.co.in/
 
 ## Website Goal
-Redesign the website from a basic layout into a modern, neat, and highly professional digital presence. The site must present Star Fumigation Agencies as a premium, government-approved, and AQIS (Australian Quarantine) accredited fumigation and pest control service provider in India.
+Redesign the website from a basic layout into a modern, neat, and highly professional digital presence. The site must present STAR FUMIGATION as a premium, government-approved, and AQIS (Australian Quarantine) accredited fumigation and pest control service provider in India.
 
 ## Target Audience
 - Importers and Exporters (cargo, containers, shipping lines, logistics)

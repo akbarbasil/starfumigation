@@ -8,6 +8,7 @@
     var subparent = placeholder.getAttribute('data-subparent') || '';
     var subparentUrl = placeholder.getAttribute('data-subparent-url') || '';
     var current = placeholder.getAttribute('data-current') || '';
+    var customBg = placeholder.getAttribute('data-bg') || '';
 
     var html = `
         <style>
@@ -165,7 +166,7 @@
                 }
             }
         </style>
-        <div class="breadcrumb-area bg-img" data-bg="assets/images/bg/breadcrumb.jpg">
+        <div class="breadcrumb-area" id="dynamic-breadcrumb-area">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
@@ -190,4 +191,38 @@
     `;
 
     placeholder.outerHTML = html;
+
+    // Dynamically load background image with fallback chain
+    var breadcrumbArea = document.getElementById('dynamic-breadcrumb-area');
+    if (breadcrumbArea) {
+        var primarySrc = customBg || 'assets/images/bg/breadcrumb.jpg';
+        var img = new Image();
+        img.src = primarySrc;
+
+        img.onload = function () {
+            breadcrumbArea.style.backgroundImage = 'url(' + primarySrc + ')';
+        };
+
+        img.onerror = function () {
+            // If custom image fails, try default breadcrumb.jpg
+            if (primarySrc !== 'assets/images/bg/breadcrumb.jpg') {
+                var defaultImg = new Image();
+                defaultImg.src = 'assets/images/bg/breadcrumb.jpg';
+                defaultImg.onload = function () {
+                    breadcrumbArea.style.backgroundImage = 'url(assets/images/bg/breadcrumb.jpg)';
+                };
+                defaultImg.onerror = function () {
+                    // Ultimate fallback to logo
+                    breadcrumbArea.style.backgroundImage = 'url(assets/images/logo/starfumigation-logo.png)';
+                    breadcrumbArea.style.backgroundSize = 'contain';
+                    breadcrumbArea.style.backgroundPosition = 'center';
+                };
+            } else {
+                // If breadcrumb.jpg itself fails, use logo
+                breadcrumbArea.style.backgroundImage = 'url(assets/images/logo/starfumigation-logo.png)';
+                breadcrumbArea.style.backgroundSize = 'contain';
+                breadcrumbArea.style.backgroundPosition = 'center';
+            }
+        };
+    }
 })();

@@ -1,4 +1,4 @@
-(function() {
+(function () {
     var footerHTML = `
     <!-- Custom Modern Footer Styling -->
     <style>
@@ -197,16 +197,15 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="footer-single-widget">
                         <a href="index.html" class="footer-logo-container">
-                            <img src="assets/images/logo/starfumigation-logo.png" alt="Star Fumigation">
+                            <img src="assets/images/logo/1.png" alt="Star Fumigation">
                         </a>
-                        <p class="desc-text">STAR FUMIGATION AGENCIES is one of India's leading, highly reliable, and certified providers of professional fumigation and quarantine pest management services. Operating under strict global compliance protocols, we protect your cargo, facilities, and commodities.</p>
+                        <p class="desc-text">STAR FUMIGATION is one of India's leading, highly reliable, and certified providers of professional fumigation and quarantine pest management services. Operating under strict global compliance protocols, we protect your cargo, facilities, and commodities.</p>
                         
                         <div class="footer-social-wrapper">
                             <div class="footer-social-links">
-                                <a href="#" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
-                                <a href="#" aria-label="Twitter"><i class="fa fa-twitter"></i></a>
-                                <a href="#" aria-label="Pinterest"><i class="fa fa-pinterest"></i></a>
-                                <a href="#" aria-label="Vimeo"><i class="fa fa-vimeo"></i></a>
+                                <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
+                                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fa fa-twitter"></i></a>
+                                <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa fa-instagram"></i></a>
                             </div>
                         </div>
                     </div>
@@ -271,7 +270,7 @@
         </div>
     </footer>
     `;
-    
+
     var placeholder = document.getElementById('footer-placeholder');
     if (placeholder) {
         placeholder.innerHTML = footerHTML;

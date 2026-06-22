@@ -148,40 +148,23 @@
             img.onload = function () {
                 // Render with clean mapped service name
                 el.innerHTML = `
-                    <div class="service-image-container-wrapper">
-                        <img src="${img.src}" alt="${cleanTitle}" />
-                        <a href="${img.src}" class="service-gallery-zoom-icon img-popup" title="${cleanTitle}">
-                            <i class="fa fa-search-plus"></i>
-                        </a>
-                        <div class="service-gallery-overlay">
-                            <div class="service-gallery-info">
-                                <h5>${cleanTitle}</h5>
-                                <p><i class="fa fa-picture-o"></i> Click to enlarge picture</p>
+                    <a href="${img.src}" class="img-popup" title="${cleanTitle}" style="display: block; margin-bottom: 40px; text-decoration: none;">
+                        <div class="service-image-container-wrapper" style="margin-bottom: 0;">
+                            <img src="${img.src}" alt="${cleanTitle}" />
+                            <div class="service-gallery-overlay">
+                                <div class="service-gallery-info">
+                                    <h5>${cleanTitle}</h5>
+                                    <p><i class="fa fa-picture-o"></i> Click to enlarge picture</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 `;
             };
 
             img.onerror = function () {
-                if (index === '1') {
-                    // For the primary image, show the graphic fallback placeholder
-                    el.innerHTML = `
-                        <div class="premium-image-wrapper">
-                            <div class="placeholder-cross" style="display: flex;">
-                                <div class="placeholder-inner">
-                                    <div class="placeholder-icon">
-                                        <i class="fa fa-picture-o"></i>
-                                    </div>
-                                    <span class="placeholder-text">Image Placeholder</span>
-                                </div>
-                            </div>
-                        </div>
-                    `;
-                } else {
-                    // For secondary images (2, 3), hide the element completely to avoid empty spaces
-                    el.style.display = 'none';
-                }
+                // Hide the element completely to avoid empty spaces when image is missing
+                el.style.display = 'none';
             };
         });
 
