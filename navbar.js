@@ -452,7 +452,7 @@
                                         <li class="${isAboutActive ? 'active' : ''}"><a href="#">About Us <i class="fa fa-angle-down"></i></a>
                                             <ul class="dropdown">
                                                 <li class="${page === 'why_choose_fumigation.html' ? 'active' : ''}"><a href="why_choose_fumigation.html">Why Choose Fumigation</a></li>
-                                                <li class="${page === 'chairmans_message.html' ? 'active' : ''}"><a href="chairmans_message.html">Chairman's Message</a></li>
+                                                <li class="${page === 'chairmans_message.html' ? 'active' : ''}"><a href="chairmans_message.html">Partners' Message</a></li>
                                             </ul>
                                         </li>
                                         <li class="${isGalleryActive ? 'active' : ''}"><a href="gallery.html">Gallery</a></li>
@@ -533,7 +533,7 @@
                                         <li class="menu-item-has-children ${isAboutActive ? 'active' : ''}"><a href="#">About Us</a>
                                             <ul class="dropdown">
                                                 <li class="${page === 'why_choose_fumigation.html' ? 'active' : ''}"><a href="why_choose_fumigation.html">Why Choose Fumigation</a></li>
-                                                <li class="${page === 'chairmans_message.html' ? 'active' : ''}"><a href="chairmans_message.html">Chairman's Message</a></li>
+                                                <li class="${page === 'chairmans_message.html' ? 'active' : ''}"><a href="chairmans_message.html">Partners' Message</a></li>
                                             </ul>
                                         </li>
                                         <li class="${isGalleryActive ? 'active' : ''}"><a href="gallery.html">Gallery</a></li>
