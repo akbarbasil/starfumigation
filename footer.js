@@ -241,7 +241,7 @@
                                 <i class="fa fa-phone"></i>
                                 <div>
                                     <span class="contact-label">Call Support</span>
-                                    <a href="tel:044-25220065">044-25220065</a>, <a href="tel:044-25220075">25220075</a>, <a href="tel:044-25220076">25220076</a>
+                                    <a href="tel:8754580666">8754580666</a>
                                 </div>
                             </li>
                             <li>

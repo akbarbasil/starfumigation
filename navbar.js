@@ -414,7 +414,7 @@
                     <div class="row">
                         <div class="col-lg-8">
                             <ul class="header-top-left">
-                                <li><i class="fa fa-headphones"></i><a href="tel:25220065">044-25220065, 25220075, 25220076</a></li>
+                                <li><i class="fa fa-headphones"></i><a href="tel:8754580666">8754580666</a></li>
                                 <li><i class="fa fa-envelope-open"></i><a href="mailto:info@starfumigation.com">info@starfumigation.com</a></li>
                             </ul>
                         </div>
