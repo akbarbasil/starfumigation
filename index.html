@@ -84,9 +84,9 @@
             color: #ffffff !important;
             font-family: 'Work Sans', sans-serif;
             font-weight: 800;
-            font-size: 56px;
-            line-height: 1.15;
-            margin-bottom: 35px;
+            font-size: 36px;
+            line-height: 1.25;
+            margin-bottom: 30px;
             text-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
         }
 
@@ -613,6 +613,9 @@
             background: #ffffff;
             width: 90%;
             max-width: 550px;
+            max-height: 90vh;
+            display: flex;
+            flex-direction: column;
             border-radius: 20px;
             box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
             z-index: 10;
@@ -710,9 +713,9 @@
         }
 
         .pest-modal-body {
-            padding: 30px;
-            max-height: 60vh;
+            padding: 25px 30px;
             overflow-y: auto;
+            flex: 1 1 auto;
         }
 
         .pest-info-row {
@@ -772,6 +775,21 @@
             cursor: pointer;
         }
 
+        @media (max-width: 575.98px) {
+            .pest-modal-banner {
+                height: 150px;
+            }
+            .pest-modal-body {
+                padding: 20px;
+            }
+            .pest-modal-header {
+                padding: 15px 20px 20px;
+            }
+            .pest-modal-footer {
+                padding: 15px 20px 20px;
+            }
+        }
+
         .btn-pest-book:hover {
             background: #222222;
             color: #ffffff;
@@ -817,9 +835,9 @@
         /* Mobile and Tablet Media Queries for Slider Text */
         @media (max-width: 991.98px) {
             .hero-slider-content h2.slide-title {
-                font-size: 38px !important;
-                line-height: 1.2 !important;
-                margin-bottom: 25px !important;
+                font-size: 26px !important;
+                line-height: 1.25 !important;
+                margin-bottom: 20px !important;
             }
             .about-address {
                 display: flex !important;
@@ -843,9 +861,9 @@
 
         @media (max-width: 767.98px) {
             .hero-slider-content h2.slide-title {
-                font-size: 24px !important;
+                font-size: 18px !important;
                 line-height: 1.3 !important;
-                margin-bottom: 20px !important;
+                margin-bottom: 15px !important;
             }
             .hero-slider-content h5.slide-desc {
                 font-size: 11px !important;
@@ -1174,7 +1192,7 @@
                     <div class="col-md-3 col-sm-6">
                         <div class="counterup-item mt-30">
                             <div class="counter-number-wrap">
-                                <span class="odometer" data-count="50"></span>
+                                <span class="odometer" data-count="30"></span>
                                 <span class="counter-plus">+</span>
                             </div>
                             <h4 style="color:#fff">Passionate Employee</h4>
@@ -1207,7 +1225,7 @@
                                 <span class="feature-badge">Quality</span>
                                 <div class="blog-thumb">
                                     <a href="about.html">
-                                        <img src="assets/images/index/blog-01.jpg" alt="Quality Pest Control">
+                                        <img src="assets/images/index/blog-01.png" alt="Quality Pest Control">
                                     </a>
                                 </div>
                                 <div class="blog-content">
@@ -1254,7 +1272,7 @@
                                 <span class="feature-badge">Safety</span>
                                 <div class="blog-thumb">
                                     <a href="safety.html">
-                                        <img src="assets/images/index/blog-03.jpg" alt="Safety Practices">
+                                        <img src="assets/images/index/blog-03.png" alt="Safety Practices">
                                     </a>
                                 </div>
                                 <div class="blog-content">
@@ -1278,7 +1296,7 @@
                                 <span class="feature-badge">Prompt</span>
                                 <div class="blog-thumb">
                                     <a href="contact.html">
-                                        <img src="assets/images/index/blog-04.jpg" alt="Timely Treatment">
+                                        <img src="assets/images/index/blog-04.png" alt="Timely Treatment">
                                     </a>
                                 </div>
                                 <div class="blog-content">

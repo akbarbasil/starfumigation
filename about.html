@@ -145,18 +145,20 @@
         .partner-card {
             background: #fff;
             border-radius: 16px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
-            border: 1px solid rgba(0,0,0,0.06);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+            border: 1px solid rgba(0, 0, 0, 0.06);
             padding: 30px;
             text-align: center;
             height: 100%;
             transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
         }
+
         .partner-card:hover {
             transform: translateY(-8px);
             box-shadow: 0 20px 45px rgba(247, 148, 29, 0.08) !important;
             border-color: rgba(247, 148, 29, 0.2) !important;
         }
+
         .partner-card .partner-img-wrapper {
             width: 200px;
             height: 200px;
@@ -164,9 +166,10 @@
             border-radius: 50%;
             overflow: hidden;
             border: 4px solid #fff;
-            box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
             transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
         }
+
         .partner-card:hover .partner-img-wrapper {
             transform: scale(1.05);
             border-color: #F7941D !important;
@@ -178,7 +181,540 @@
                 margin-bottom: 40px;
             }
         }
+
+        /* Partners' Message Styles */
+        .chairman-card {
+            background: #ffffff;
+            border-radius: 24px;
+            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.03);
+            border: 1px solid rgba(0, 0, 0, 0.04);
+            padding: 40px;
+            overflow: hidden;
+        }
+
+        .chairman-thumb {
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            background: #f7f7f7;
+        }
+
+        .chairman-thumb img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+            transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        .chairman-thumb:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(247, 148, 29, 0.15);
+            border-color: rgba(247, 148, 29, 0.3);
+        }
+
+        .chairman-thumb:hover img {
+            transform: scale(1.03);
+        }
+
+        .partner-profile-wrap {
+            padding: 30px 20px;
+            border-radius: 20px;
+            background: #ffffff;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        .partner-profile-wrap:hover {
+            transform: translateY(-8px);
+            border-color: rgba(247, 148, 29, 0.2);
+            box-shadow: 0 20px 45px rgba(247, 148, 29, 0.08);
+            background: #ffffff;
+        }
+
+        .partner-profile-wrap:hover .chairman-thumb {
+            transform: translateY(-4px);
+            border-color: #F7941D;
+            box-shadow: 0 15px 35px rgba(247, 148, 29, 0.18);
+        }
+
+        .chairman-title-wrap {
+            border-bottom: 2px solid #F7941D;
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+        }
+
+        .chairman-name {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 28px;
+            color: #222;
+            margin: 0;
+        }
+
+        .chairman-designation {
+            color: #F7941D;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: 5px;
+            display: block;
+        }
+
+        .chairman-message-text p {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 15px;
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .chairman-message-text p:last-child {
+            margin-bottom: 0;
+        }
+
+        .quote-block {
+            background: #fafafa;
+            border-left: 4px solid #F7941D;
+            padding: 20px 25px;
+            border-radius: 0 16px 16px 0;
+            font-style: italic;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 15px;
+            color: #444;
+            margin: 30px 0;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 991px) {
+            .chairman-thumb {
+                max-width: 450px;
+                margin: 0 auto 40px auto;
+            }
+        }
+
+        /* Why Choose Fumigation Styles */
+        .why-choose-content {
+            background: #ffffff;
+            padding: 45px;
+            border-radius: 24px;
+            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.03);
+            border: 1px solid rgba(0, 0, 0, 0.04);
+            margin-bottom: 40px;
+        }
+
+        .why-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 30px;
+            padding-bottom: 25px;
+            border-bottom: 1px dashed rgba(0, 0, 0, 0.08);
+        }
+
+        .why-item:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .why-icon {
+            background: rgba(247, 148, 29, 0.1);
+            color: #F7941D;
+            width: 60px;
+            height: 60px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin-right: 25px;
+            flex-shrink: 0;
+            box-shadow: 0 5px 15px rgba(247, 148, 29, 0.08);
+            transition: all 0.3s ease;
+        }
+
+        .why-item:hover .why-icon {
+            background: #F7941D;
+            color: #ffffff;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(247, 148, 29, 0.25);
+        }
+
+        .why-text h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 18px;
+            color: #222;
+            margin-bottom: 10px;
+        }
+
+        .why-text p {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 14.5px;
+            color: #555;
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        /* Counter Section */
+        .counterup-area {
+            position: relative;
+            padding: 60px 0 65px !important;
+        }
+
+        @media only screen and (max-width: 767.98px) {
+            .counterup-area {
+                padding: 40px 0 !important;
+            }
+        }
+
+        .counterup-area::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(34, 34, 34, 0.85);
+            z-index: 1;
+        }
+
+        .counterup-area .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .counterup-item {
+            text-align: center;
+        }
+
+        .counter-number-wrap {
+            display: inline-flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            margin-bottom: 10px !important;
+        }
+
+        .counterup-item .odometer {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 48px;
+            color: #F7941D;
+            display: inline-block !important;
+            margin: 0 !important;
+        }
+
+        .odometer-inside::after {
+            display: none !important;
+            content: none !important;
+        }
+
+        .counterup-item .odometer::after {
+            display: none !important;
+            content: none !important;
+        }
+
+        .counter-plus {
+            color: #F7941D !important;
+            font-size: 44px !important;
+            font-weight: 700 !important;
+            display: inline-block !important;
+            margin-left: 2px !important;
+            vertical-align: middle !important;
+            line-height: 1 !important;
+        }
+
+        /* IPPC Seal Styles */
+        .ippc-seal-container {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+        }
+
+        .ippc-seal {
+            border: 3px solid #222222;
+            border-radius: 4px;
+            display: inline-flex;
+            font-family: 'Arial Black', 'Arial', sans-serif;
+            background: #ffffff;
+            color: #222222;
+            overflow: hidden;
+            height: 76px;
+            align-items: stretch;
+        }
+
+        .ippc-logo-sec {
+            display: flex;
+            align-items: center;
+            padding: 4px 10px;
+            border-right: 3px solid #222222;
+            gap: 8px;
+            background: #ffffff;
+        }
+
+        .ippc-letters-vertical {
+            display: flex;
+            flex-direction: column;
+            font-size: 13px;
+            font-weight: 900;
+            line-height: 1.0;
+            text-align: center;
+            justify-content: space-between;
+            height: 56px;
+            color: #222222;
+        }
+
+        .ippc-data-sec {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 4px 18px;
+            min-width: 130px;
+            background: #ffffff;
+        }
+
+        .ippc-reg-num {
+            font-size: 20px;
+            font-weight: 900;
+            letter-spacing: 0.5px;
+            line-height: 1.1;
+            color: #222222;
+        }
+
+        .ippc-treatment-type {
+            font-size: 20px;
+            font-weight: 900;
+            line-height: 1.1;
+            border-top: 3px solid #222222;
+            width: 100%;
+            text-align: center;
+            margin-top: 4px;
+            padding-top: 4px;
+            color: #222222;
+        }
+    
+        /* Sidebar Navigation Widget */
+        .sidebar-widget {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+            border: 1px solid rgba(0, 0, 0, 0.04);
+            margin-bottom: 40px;
+        }
+
+        .widget-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #222222;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 12px;
+            border-bottom: 2px solid rgba(0, 0, 0, 0.04);
+        }
+
+        .widget-title::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background: #F7941D;
+        }
+
+        .service-menu-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .service-menu-list li {
+            margin-bottom: 12px;
+        }
+
+        .service-menu-list li:last-child {
+            margin-bottom: 0;
+        }
+
+        .service-menu-list li a {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 14px 20px;
+            background: #f8fafc;
+            border-radius: 12px;
+            color: #475569;
+            font-weight: 600;
+            font-size: 14px;
+            border-left: 3px solid transparent;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .service-menu-list li a i {
+            font-size: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .service-menu-list li a:hover,
+        .service-menu-list li.active a {
+            background: rgba(247, 148, 29, 0.05);
+            color: #F7941D;
+            border-left-color: #F7941D;
+        }
+
+        .service-menu-list li a:hover i {
+            transform: translateX(4px);
+        }
+
+        /* Help Desk Widget */
+        .help-widget {
+            background: linear-gradient(135deg, #0b0f19 0%, #1e293b 100%);
+            border-radius: 20px;
+            padding: 35px 30px;
+            color: #ffffff;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(11, 15, 25, 0.2);
+            margin-bottom: 40px;
+        }
+
+        .help-widget::before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: rgba(247, 148, 29, 0.08);
+            z-index: 1;
+        }
+
+        .help-widget-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .help-icon {
+            font-size: 32px;
+            color: #F7941D;
+            margin-bottom: 20px;
+        }
+
+        .help-widget h4 {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            line-height: 1.4;
+            color: #ffffff !important;
+        }
+
+        .help-widget p {
+            color: #cbd5e1 !important;
+            font-size: 14px;
+            margin-bottom: 25px;
+            line-height: 1.6;
+        }
+
+        .help-phone-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: #F7941D;
+            color: #ffffff;
+            padding: 12px 25px;
+            border-radius: 10px;
+            font-weight: 700;
+            font-size: 15px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 15px rgba(247, 148, 29, 0.25);
+        }
+
+        .help-phone-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(247, 148, 29, 0.35);
+            background: #e08316;
+            color: #ffffff;
+        }
+
+        /* Certificate Widget */
+        .cert-widget {
+            border: 2px dashed rgba(247, 148, 29, 0.3);
+            border-radius: 20px;
+            padding: 25px;
+            background: #ffffff;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .cert-widget:hover {
+            border-color: #F7941D;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.02);
+        }
+
+        .cert-badge-icon {
+            background: rgba(247, 148, 29, 0.08);
+            color: #F7941D;
+            font-size: 28px;
+            width: 60px;
+            height: 60px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .cert-details h5 {
+            font-size: 15px;
+            font-weight: 700;
+            color: #222222;
+            margin: 0 0 4px 0;
+        }
+
+        .cert-details p {
+            font-size: 12px;
+            color: #64748b;
+            margin: 0;
+            line-height: 1.4;
+        }
+
+        /* Sticky sidebar on desktop */
+        @media (min-width: 992px) {
+            .sidebar-sticky-wrapper {
+                position: -webkit-sticky;
+                position: sticky;
+                top: 130px;
+                align-self: start;
+            }
+        }
+        
+        .service-details-wrapper {
+            padding: 60px 0;
+            background: #fdfdfd;
+        }
+        
+        @media (max-width: 991.98px) {
+            .sidebar-widget, .help-widget, .cert-widget {
+                margin-top: 40px;
+            }
+        }
     </style>
+
 </head>
 
 <body>
@@ -191,92 +727,184 @@
 
     <main>
         <!-- breadcrumb section start -->
-        <div id="breadcrumb-placeholder" data-title="About Us" data-current="About Us" data-bg="assets/images/logo/1.png"></div>
+        <div id="breadcrumb-placeholder" data-title="About Us" data-current="About Us"
+            data-bg="assets/images/bg/partners_message_bg.png"></div>
         <script src="breadcrumb.js"></script>
         <!-- breadcrumb section end -->
 
         <!-- service details section start -->
-        <div class="service-details-area section-padding"
-            style="background: #fdfdfd; padding: 100px 0; overflow: hidden;">
+        <div class="service-details-wrapper">
             <div class="container">
-                <div class="row align-items-center">
-                    <!-- Image Column (Left Side - Single Premium Image Card) -->
-                    <div class="col-lg-5 order-1">
-                        <div class="about-image-card" style="height: 460px; margin-bottom: 30px;">
-                            <img src="assets/images/about/about.png" alt="STAR FUMIGATION - Office" />
-                            <div class="about-image-badge">
-                                <i class="fa fa-check-circle"></i> AQIS Approved
-                            </div>
-                            <div class="about-image-badge about-image-badge-dark" style="left: auto; right: 20px;">
-                                <i class="fa fa-shield"></i> Government Certified
+                <div class="row">
+                    <!-- Main Content (col-lg-8) -->
+                    <div class="col-lg-8 order-1 order-lg-2">
+                        
+                        <div class="chairman-card" style="padding: 50px 40px;">
+                    <!-- Partners Section Header -->
+                    <div class="row mb-5">
+                        <div class="col-12 text-center">
+                            <div class="chairman-title-wrap text-center"
+                                style="display: inline-block; margin-bottom: 10px;">
+                                <h3 class="chairman-name" style="font-size: 32px;">Message from our Partners</h3>
+                                <span class="chairman-designation">Leadership & Commitment</span>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Text Column (Right Side with premium cards feel) -->
-                    <div class="col-lg-7 order-2" style="padding-left: 30px;">
-                        <div
-                            style="background: #ffffff; padding: 45px; border-radius: 24px; box-shadow: 0 15px 45px rgba(0,0,0,0.03); border: 1px solid rgba(0,0,0,0.04); position: relative;">
-                            <div class="section-title" style="margin-bottom: 25px;">
+                    <!-- Profiles Row -->
+                    <div class="row text-center mb-5">
+                        <!-- S. Venkatesan -->
+                        <div class="col-lg-6 col-md-6 mb-4">
+                            <div class="partner-profile-wrap">
+                                <h4
+                                    style="font-size: 24px; font-weight: 800; color: #222; font-family: 'Montserrat', sans-serif; margin-bottom: 6px;">
+                                    S. Venkatesan</h4>
                                 <span
-                                    style="color: #F7941D; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 2.5px; display: block; margin-bottom: 10px;">Who
-                                    We Are</span>
-                                <h2 class="title"
-                                    style="font-size: 34px; font-weight: 800; color: #222; line-height: 1.3;">About Our
-                                    Company</h2>
+                                    style="color: #F7941D; font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 13px; text-transform: uppercase; letter-spacing: 1.5px; display: block; margin-bottom: 0;">Managing
+                                    Partner</span>
                             </div>
+                        </div>
 
-                            <p style="font-size: 15px; color: #555; line-height: 1.8; margin-bottom: 20px;">
-                                <strong style="color: #F7941D; font-weight: 700;">STAR FUMIGATION</strong> is one of the
-                                leading, reliable, and affordable Fumigation and Pest Control companies in India. We
-                                operate as a professionally managed organization with highly qualified quarantine
-                                experts.
-                            </p>
+                        <!-- R. Parthiban -->
+                        <div class="col-lg-6 col-md-6 mb-4">
+                            <div class="partner-profile-wrap">
+                                <h4
+                                    style="font-size: 24px; font-weight: 800; color: #222; font-family: 'Montserrat', sans-serif; margin-bottom: 6px;">
+                                    R. Parthiban</h4>
+                                <span
+                                    style="color: #F7941D; font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 13px; text-transform: uppercase; letter-spacing: 1.5px; display: block; margin-bottom: 0;">Managing
+                                    Partner</span>
+                            </div>
+                        </div>
+                    </div>
 
-                            <p style="font-size: 15px; color: #555; line-height: 1.8; margin-bottom: 25px;">
-                                Officially recognized by the <strong style="color: #222;">Directorate of Plant
-                                    Protection Quarantine and Storage (DPPQ&S)</strong>, Ministry of Agriculture, Govt.
-                                of India, and certified as an Acceptable Treatment Provider under the <strong
-                                    style="color: #222;">Australian Quarantine Inspection Service (AQIS)</strong>
-                                guidelines.
-                            </p>
+                    <!-- Joint Message Text Column -->
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="chairman-message-text" style="padding: 0 10px;">
+                                <p>
+                                    Welcome to <strong>Star Fumigation</strong>. Since our inception, our mission has
+                                    been to protect global trade commodities and safeguard domestic warehouses against
+                                    destructive pests through advanced quarantine fumigation methodologies.
+                                </p>
 
-                            <!-- Highlights list -->
-                            <div
-                                style="background: #fafafa; border-radius: 16px; padding: 20px 25px; border-left: 4px solid #F7941D;">
-                                <div style="display: flex; margin-bottom: 12px; align-items: center;">
-                                    <i class="fa fa-chevron-right"
-                                        style="color: #F7941D; font-size: 12px; margin-right: 12px;"></i>
-                                    <span style="font-size: 14px; color: #444; font-weight: 600;">Compliant with ISPM-15
-                                        Standard Guidelines</span>
+                                <p>
+                                    Over the past 31 years, we have grown from a local enterprise in Chennai to one of
+                                    the most trusted quarantine treatment companies in India. Our strict adherence to
+                                    national and international plant protection standards (ISPM-15, NSPM-11, NSPM-12,
+                                    NSPM-22, NSPM-23, AFAS) guarantees that your export consignments get cleared
+                                    seamlessly at global ports without risk of quarantine failures.
+                                </p>
+
+                                <div class="quote-block">
+                                    "Our core commitment has always been safety, environmental responsibility, and high
+                                    workmanship. When you trust us with your cargo or facility, you receive treatment
+                                    backed by licensed experts using premium technology."
                                 </div>
-                                <div style="display: flex; margin-bottom: 12px; align-items: center;">
-                                    <i class="fa fa-chevron-right"
-                                        style="color: #F7941D; font-size: 12px; margin-right: 12px;"></i>
-                                    <span style="font-size: 14px; color: #444; font-weight: 600;">Regulated Methyl
-                                        Bromide (MBr) & Phosphine Treatments</span>
-                                </div>
-                                <div style="display: flex; align-items: center;">
-                                    <i class="fa fa-chevron-right"
-                                        style="color: #F7941D; font-size: 12px; margin-right: 12px;"></i>
-                                    <span style="font-size: 14px; color: #444; font-weight: 600;">Dedicated Customs &
-                                        Quarantine Clearance Support</span>
-                                </div>
+
+                                <p>
+                                    As we navigate the future, we continue to invest in eco-friendly pest management
+                                    alternatives, robust staff training, and streamlined clearance protocols. We look
+                                    forward to remaining your reliable partner in pest control and crop quarantine.
+                                </p>
+
+                                <p
+                                    style="margin-top: 40px; font-weight: 700; color: #222; font-family: 'Montserrat', sans-serif; border-top: 1px solid #eee; padding-top: 30px;">
+                                    <span>
+                                        Warm Regards,<br>
+                                        <span style="color:#F7941D; font-size: 18px; font-weight: 800;">S. Venkatesan &
+                                            R. Parthiban</span><br>
+                                        <span
+                                            style="font-size:12px; font-weight:500; color:#777; text-transform:uppercase; letter-spacing:1px;">Managing
+                                            Partners</span><br>
+                                        <span
+                                            style="font-size:14px; font-weight:500; color:#777; display:block; margin-top:5px;">Star
+                                            Fumigation Group</span>
+                                    </span>
+                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <!-- Core Standards & Accreditations -->
-                <div class="row mt-5">
+                    
+                        <div style="margin-top: 50px;"></div>
+                        <!-- Core Standards & Accreditations -->
+                <div class="row mt-2">
                     <div class="col-12 text-center" style="margin-bottom: 40px;">
                         <span
                             style="color: #F7941D; font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; display: block; margin-bottom: 8px;">Technical
                             Standards</span>
                         <h3 style="font-size: 28px; font-weight: 700; color: #222;">Accreditations & Compliance</h3>
                     </div>
+<!-- ISPM-15 Certification -->
+                    <div class="col-lg-12 mb-4">
+                        <div
+                            style="background: #fff; padding: 25px; border-radius: 12px; box-shadow: 0 8px 30px rgba(247, 148, 29, 0.05); border: 2px solid #F7941D; height: 100%; position: relative;">
+                            <span
+                                style="background: #F7941D; color: #ffffff; font-size: 10px; font-weight: 700; padding: 4px 10px; border-radius: 4px; position: absolute; top: -14px; right: 20px; text-transform: uppercase; letter-spacing: 1px; box-shadow: 0 4px 10px rgba(247, 148, 29, 0.25);">Primary
+                                Stamp</span>
+                            <h5
+                                style="font-size: 17px; font-weight: 700; color: #222; margin-bottom: 12px; border-bottom: 2px solid #F7941D; padding-bottom: 8px;">
+                                ISPM-15 Certification</h5>
+                            <p style="font-size: 14px; color: #666; line-height: 1.6; margin: 0 0 15px 0;">
+                                Authorized to treat and stamp wood packaging materials (WPM), including wooden pallets,
+                                crates, and dunnage, ensuring they meet phytosanitary standards for exports.
+                            </p>
+                            <div class="ippc-seal-container">
+                                <!-- Stamp 1: IPPS-1158-MB -->
+                                <div class="ippc-seal">
+                                    <div class="ippc-logo-sec">
+                                        <svg viewBox="0 0 24 50" width="20" height="60"
+                                            style="fill: none; stroke: #222222; stroke-width: 3.5; stroke-linecap: round; stroke-linejoin: round;">
+                                            <line x1="12" y1="2" x2="12" y2="48" stroke="#222222"></line>
+                                            <path d="M12,12 L5,14 L5,8" stroke="#222222"></path>
+                                            <path d="M12,22 L5,24 L5,18" stroke="#222222"></path>
+                                            <path d="M12,32 L5,34 L5,28" stroke="#222222"></path>
+                                            <path d="M12,42 L5,44 L5,38" stroke="#222222"></path>
+                                        </svg>
+                                        <div class="ippc-letters-vertical">
+                                            <span>I</span>
+                                            <span>P</span>
+                                            <span>P</span>
+                                            <span>C</span>
+                                        </div>
+                                    </div>
+                                    <div class="ippc-data-sec">
+                                        <div class="ippc-reg-num">IN-1158</div>
+                                        <div class="ippc-treatment-type">MB</div>
+                                    </div>
+                                </div>
 
-                    <div class="col-lg-4 col-md-6 mb-4">
+                                <!-- Stamp 2: IPPS-IN-0375-MB -->
+                                <div class="ippc-seal">
+                                    <div class="ippc-logo-sec">
+                                        <svg viewBox="0 0 24 50" width="20" height="60"
+                                            style="fill: none; stroke: #222222; stroke-width: 3.5; stroke-linecap: round; stroke-linejoin: round;">
+                                            <line x1="12" y1="2" x2="12" y2="48" stroke="#222222"></line>
+                                            <path d="M12,12 L5,14 L5,8" stroke="#222222"></path>
+                                            <path d="M12,22 L5,24 L5,18" stroke="#222222"></path>
+                                            <path d="M12,32 L5,34 L5,28" stroke="#222222"></path>
+                                            <path d="M12,42 L5,44 L5,38" stroke="#222222"></path>
+                                        </svg>
+                                        <div class="ippc-letters-vertical">
+                                            <span>I</span>
+                                            <span>P</span>
+                                            <span>P</span>
+                                            <span>C</span>
+                                        </div>
+                                    </div>
+                                    <div class="ippc-data-sec">
+                                        <div class="ippc-reg-num">IN-0375</div>
+                                        <div class="ippc-treatment-type">MB</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+<!-- NSPM-11 & NSPM-22 -->
+                    <div class="col-lg-6 mb-4">
                         <div
                             style="background: #fff; padding: 25px; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.02); border: 1px solid rgba(0,0,0,0.05); height: 100%;">
                             <h5
@@ -290,34 +918,26 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-4 col-md-6 mb-4">
+                    
+<!-- AFAS Standards -->
+                    <div class="col-lg-6 mb-4">
                         <div
                             style="background: #fff; padding: 25px; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.02); border: 1px solid rgba(0,0,0,0.05); height: 100%;">
                             <h5
                                 style="font-size: 17px; font-weight: 700; color: #222; margin-bottom: 12px; border-bottom: 2px solid #F7941D; padding-bottom: 8px;">
-                                AQIS & AFAS Standards</h5>
+                                AFAS Standards</h5>
                             <p style="font-size: 14px; color: #666; line-height: 1.6; margin: 0;">
                                 Certified under the Australian Fumigation Accreditation Scheme (AFAS) to issue valid
                                 treatment certificates acceptable to Australian border authorities.
                             </p>
                         </div>
                     </div>
-
-                    <div class="col-lg-4 col-md-12 mb-4">
-                        <div
-                            style="background: #fff; padding: 25px; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.02); border: 1px solid rgba(0,0,0,0.05); height: 100%;">
-                            <h5
-                                style="font-size: 17px; font-weight: 700; color: #222; margin-bottom: 12px; border-bottom: 2px solid #F7941D; padding-bottom: 8px;">
-                                ISPM-15 Certification</h5>
-                            <p style="font-size: 14px; color: #666; line-height: 1.6; margin: 0;">
-                                Authorized to treat and stamp wood packaging materials (WPM), including wooden pallets,
-                                crates, and dunnage, ensuring they meet phytosanitary standards for exports.
-                            </p>
-                        </div>
-                    </div>
                 </div>
 
-                <!-- Highlights Section -->
+                
+                        
+                        <div style="margin-top: 50px;"></div>
+                        <!-- Highlights Section -->
                 <div class="row mt-5">
                     <div class="col-12 text-center" style="margin-bottom: 40px;">
                         <span
@@ -406,56 +1026,191 @@
                                     </p>
                                 </div>
                             </div>
+                        </div>
                     </div>
                 </div>
-
-                <!-- Meet Our Partners Section -->
-                <div class="row mt-5">
-                    <div class="col-12 text-center" style="margin-bottom: 40px;">
-                        <span
-                            style="color: #F7941D; font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; display: block; margin-bottom: 8px;">Leadership</span>
-                        <h3 style="font-size: 28px; font-weight: 700; color: #222;">Board of Partners</h3>
-                    </div>
-                    
-                    <!-- S. Venkatesan -->
-                    <div class="col-lg-6 col-md-6 mb-4">
-                        <div class="partner-card">
-                            <div class="partner-img-wrapper">
-                                <img src="assets/images/about/1.png" alt="S. Venkatesan" style="width: 100%; height: 100%; object-fit: cover;">
+                        <div style="margin-top: 50px;"></div>
+                        <div class="why-choose-content">
+                            <div class="section-title text-center mb-5">
+                                <span
+                                    style="color: #F7941D; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 2.5px; display: block; margin-bottom: 10px;">Why
+                                    Fumigation Matters</span>
+                                <h2 class="title"
+                                    style="font-size: 34px; font-weight: 800; color: #222; line-height: 1.3;">Complete
+                                    Pest Elimination & Export Safety</h2>
                             </div>
-                            <h4 style="font-size: 22px; font-weight: 700; color: #222; margin-bottom: 5px;">S. Venkatesan</h4>
-                            <span style="color: #F7941D; font-weight: 600; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; display: block; margin-bottom: 15px;">Managing Partner</span>
-                            <p style="font-size: 14px; color: #666; line-height: 1.6; margin-bottom: 20px;">Dedicated and highly experienced quarantine fumigation expert driving operations with regulatory standards compliance.</p>
-                            <div style="border-top: 1px solid #eee; padding-top: 15px; display: flex; justify-content: center; gap: 15px;">
-                                <a href="tel:9940114364" style="color: #555; font-size: 14px; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 8px;">
-                                    <i class="fa fa-phone" style="color: #F7941D;"></i> +91 99401 14364
-                                </a>
+
+                            <p
+                                style="font-size: 16px; color: #555; line-height: 1.8; text-align: center; max-width: 900px; margin: 0 auto 50px auto;">
+                                Unlike surface-level spraying or structural traps, chemical gas fumigation is a highly
+                                specialized process. It penetrates deep into structural cracks, bulk packaging, timber
+                                pallets, and agricultural grains to eradicate wood-borers, termites, beetles, and
+                                microscopic fungi. It is the gold standard for global quarantine compliance.
+                            </p>
+
+                            <div class="row mt-4">
+                                <div class="col-md-6 mb-4">
+                                    <div class="why-item">
+                                        <div class="why-icon">
+                                            <i class="fa fa-shield"></i>
+                                        </div>
+                                        <div class="why-text">
+                                            <h4>Total Volumetric Penetration</h4>
+                                            <p>Gas treatments expand uniformly to fill every cubic inch of shipping
+                                                containers or warehouses, eliminating eggs, larvae, and adult pests
+                                                nested deep inside wood grains or packaging.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 mb-4">
+                                    <div class="why-item">
+                                        <div class="why-icon">
+                                            <i class="fa fa-globe"></i>
+                                        </div>
+                                        <div class="why-text">
+                                            <h4>Global Regulatory Compliance</h4>
+                                            <p>Certified treatments prevent cargo quarantine rejections. We are
+                                                compliant with ISPM-15, AQIS, and DPPQ&S guidelines, allowing seamless
+                                                transit through major global borders.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 mb-4">
+                                    <div class="why-item">
+                                        <div class="why-icon">
+                                            <i class="fa fa-leaf"></i>
+                                        </div>
+                                        <div class="why-text">
+                                            <h4>Zero Residue in Food Products</h4>
+                                            <p>When properly aerated, specialized fumigants like Phosphine leave
+                                                absolutely no chemical residue, keeping food items, spices, and grains
+                                                safe for human consumption.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 mb-4">
+                                    <div class="why-item">
+                                        <div class="why-icon">
+                                            <i class="fa fa-check-circle"></i>
+                                        </div>
+                                        <div class="why-text">
+                                            <h4>Economical & Fast Efficacy</h4>
+                                            <p>Fumigation treats huge volumes of cargo (e.g., loaded shipholds, full
+                                                cargo containers) simultaneously, saving time and costs compared to
+                                                manual pest-control processes.</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    
-                    <!-- R. Parthiban -->
-                    <div class="col-lg-6 col-md-6 mb-4">
-                        <div class="partner-card">
-                            <div class="partner-img-wrapper">
-                                <img src="assets/images/about/2.jpg" alt="R. Parthiban" style="width: 100%; height: 100%; object-fit: cover;">
+
+                    <!-- Sidebar Section (col-lg-4) -->
+                    <div class="col-lg-4 order-2 order-lg-1">
+                        <div class="sidebar-sticky-wrapper">
+                            <!-- Services List Widget -->
+                            <div class="sidebar-widget">
+                                <h4 class="widget-title">About & Services</h4>
+                                <ul class="service-menu-list">
+                                    <li class="active"><a href="about.html">About Company <i class="fa fa-chevron-right"></i></a></li>
+                                    <li><a href="cargo_fumigation.html">Cargo Fumigation <i class="fa fa-chevron-right"></i></a></li>
+                                    <li><a href="storage_fumigation.html">Storage Fumigation <i class="fa fa-chevron-right"></i></a></li>
+                                    <li><a href="food_processing.html">Food Processing <i class="fa fa-chevron-right"></i></a></li>
+                                    <li><a href="craft_paper.html">Craft Paper & Desiccant <i class="fa fa-chevron-right"></i></a></li>
+                                    <li><a href="organic_fumigation.html">Pest Management & Organic <i class="fa fa-chevron-right"></i></a></li>
+                                    <li><a href="ispm_fumigation.html">ISPM-15 Fumigation <i class="fa fa-chevron-right"></i></a></li>
+                                    <li><a href="phytosanitary.html">Phytosanitary Assistance <i class="fa fa-chevron-right"></i></a></li>
+                                </ul>
                             </div>
-                            <h4 style="font-size: 22px; font-weight: 700; color: #222; margin-bottom: 5px;">R. Parthiban</h4>
-                            <span style="color: #F7941D; font-weight: 600; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; display: block; margin-bottom: 15px;">Managing Partner</span>
-                            <p style="font-size: 14px; color: #666; line-height: 1.6; margin-bottom: 20px;">Committed pest control professional leading strategic growth, customer relationships, and quarantine services.</p>
-                            <div style="border-top: 1px solid #eee; padding-top: 15px; display: flex; justify-content: center; gap: 15px;">
-                                <a href="tel:9500087865" style="color: #555; font-size: 14px; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 8px;">
-                                    <i class="fa fa-phone" style="color: #F7941D;"></i> +91 95000 87865
-                                </a>
+
+                            <!-- Help Desk Widget -->
+                            <div class="help-widget">
+                                <div class="help-widget-content">
+                                    <div class="help-icon">
+                                        <i class="fa fa-headphones"></i>
+                                    </div>
+                                    <h4>Need Urgent Fumigation Support?</h4>
+                                    <p>Contact our quarantine experts for custom pricing, technical inspections, and certificate assistance.</p>
+                                    <a href="tel:8754580666" class="help-phone-btn">
+                                        <i class="fa fa-phone"></i> Call 8754580666
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Certifications Widget -->
+                            <div class="cert-widget mb-3">
+                                <div class="cert-badge-icon">
+                                    <i class="fa fa-check-circle"></i>
+                                </div>
+                                <div class="cert-details">
+                                    <h5>DPPQ&S Approved</h5>
+                                    <p>Govt. of India Certified Treatment Provider</p>
+                                </div>
+                            </div>
+
+                            <div class="cert-widget">
+                                <div class="cert-badge-icon">
+                                    <i class="fa fa-globe"></i>
+                                </div>
+                                <div class="cert-details">
+                                    <h5>AFAS Standards</h5>
+                                    <p>Acceptable Quarantine certificates globally</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
-        </div>
         </div>
         <!-- service details section end -->
+
+        <!-- counter up section start -->
+        <section class="counterup-area bg-img" data-bg="assets/images/index/counter_bg.jpg">
+            <div class="container">
+                <div class="row mtn-30">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="counterup-item mt-30">
+                            <div class="counter-number-wrap">
+                                <span class="odometer" data-count="30"></span>
+                                <span class="counter-plus">+</span>
+                            </div>
+                            <h4 style="color:#fff">Years of Experience</h4>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="counterup-item mt-30">
+                            <div class="counter-number-wrap">
+                                <span class="odometer" data-count="1000"></span>
+                                <span class="counter-plus">+</span>
+                            </div>
+                            <h4 style="color:#fff">Happy Customer</h4>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="counterup-item mt-30">
+                            <div class="counter-number-wrap">
+                                <span class="odometer" data-count="555"></span>
+                                <span class="counter-plus">+</span>
+                            </div>
+                            <h4 style="color:#fff">Success Mission</h4>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="counterup-item mt-30">
+                            <div class="counter-number-wrap">
+                                <span class="odometer" data-count="30"></span>
+                                <span class="counter-plus">+</span>
+                            </div>
+                            <h4 style="color:#fff">Passionate Employee</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- counter up section end -->
     </main>
 
 

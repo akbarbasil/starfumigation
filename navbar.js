@@ -12,7 +12,7 @@
 
     // Determine active tabs
     var isHomeActive = (page === 'index.html');
-    var isAboutActive = (page === 'about.html' || page === 'why_choose_fumigation.html' || page === 'chairmans_message.html');
+    var isAboutActive = (page === 'about.html');
     var isGalleryActive = (page === 'gallery.html');
     var isContactActive = (page === 'contact.html');
 
@@ -449,12 +449,7 @@
                                 <nav class="main-menu">
                                     <ul>
                                         <li class="${isHomeActive ? 'active' : ''}"><a href="index.html">Home</a></li>
-                                        <li class="${isAboutActive ? 'active' : ''}"><a href="#">About Us <i class="fa fa-angle-down"></i></a>
-                                            <ul class="dropdown">
-                                                <li class="${page === 'why_choose_fumigation.html' ? 'active' : ''}"><a href="why_choose_fumigation.html">Why Choose Fumigation</a></li>
-                                                <li class="${page === 'chairmans_message.html' ? 'active' : ''}"><a href="chairmans_message.html">Partners' Message</a></li>
-                                            </ul>
-                                        </li>
+                                        <li class="${isAboutActive ? 'active' : ''}"><a href="about.html">About Us</a></li>
                                         <li class="${isGalleryActive ? 'active' : ''}"><a href="gallery.html">Gallery</a></li>
                                         <li class="${isServicesActive ? 'active' : ''}"><a href="#">Services <i class="fa fa-angle-down"></i></a>
                                             <ul class="dropdown">
@@ -530,13 +525,8 @@
                         <nav>
                             <ul class="mobile-menu">
                                 <li class="${isHomeActive ? 'active' : ''}"><a href="index.html">Home</a></li>
-                                        <li class="menu-item-has-children ${isAboutActive ? 'active' : ''}"><a href="#">About Us</a>
-                                            <ul class="dropdown">
-                                                <li class="${page === 'why_choose_fumigation.html' ? 'active' : ''}"><a href="why_choose_fumigation.html">Why Choose Fumigation</a></li>
-                                                <li class="${page === 'chairmans_message.html' ? 'active' : ''}"><a href="chairmans_message.html">Partners' Message</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="${isGalleryActive ? 'active' : ''}"><a href="gallery.html">Gallery</a></li>
+                                <li class="${isAboutActive ? 'active' : ''}"><a href="about.html">About Us</a></li>
+                                <li class="${isGalleryActive ? 'active' : ''}"><a href="gallery.html">Gallery</a></li>
                                 <li class="menu-item-has-children ${isServicesActive ? 'active' : ''}"><a href="#">Services </a>
                                     <ul class="dropdown">
                                         <li class="${page === 'cargo_fumigation.html' ? 'active' : ''}"><a href="cargo_fumigation.html">Cargo Fumigation</a></li>
