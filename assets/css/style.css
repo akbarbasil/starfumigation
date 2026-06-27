@@ -273,7 +273,7 @@ textarea:focus {
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
-    z-index: 1;
+    z-index: 10;
 }
 
 .slick-arrow-style:hover button.slick-arrow.slick-prev {
@@ -292,7 +292,7 @@ textarea:focus {
     background-color: #f6f6f6;
     border-radius: 50%;
     line-height: 50px;
-    z-index: 1;
+    z-index: 10;
 }
 
 .slick-arrow-style_hero button.slick-arrow.slick-next {
@@ -314,12 +314,13 @@ textarea:focus {
 
 /*--------- slick slider dot style start -------*/
 .slick-dot-style ul.slick-dots {
-    bottom: 15px;
+    bottom: 25px;
     left: 50%;
     position: absolute;
     -webkit-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
     transform: translateX(-50%);
+    z-index: 10;
 }
 
 .slick-dot-style ul.slick-dots li {
@@ -343,11 +344,43 @@ textarea:focus {
     -webkit-transition: 0.4s;
     -o-transition: 0.4s;
     transition: 0.4s;
-    border: 2px solid #777777;
+    border: 2px solid rgba(255, 255, 255, 0.7);
     background-color: transparent;
 }
 
 .slick-dot-style ul.slick-dots li.slick-active button {
+    border-color: #F7941D;
+    background-color: #F7941D;
+}
+
+/*--------- blog features carousel dot style -------*/
+.blog-carousel-active ul.slick-dots {
+    text-align: center;
+    margin-top: 25px;
+    padding: 0;
+    list-style: none;
+    width: 100%;
+}
+
+.blog-carousel-active ul.slick-dots li {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.blog-carousel-active ul.slick-dots li button {
+    width: 12px;
+    height: 12px;
+    padding: 0;
+    border: 2px solid #777777;
+    background-color: transparent;
+    border-radius: 50%;
+    cursor: pointer;
+    text-indent: -5000px;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.blog-carousel-active ul.slick-dots li.slick-active button {
     border-color: #F7941D;
     background-color: #F7941D;
 }
@@ -2179,7 +2212,7 @@ only screen and (max-width: 767.98px) {
 02. Slider area
 --------------------------*/
 .hero-slider-item {
-    height: 800px;
+    height: 550px;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -2192,27 +2225,27 @@ only screen and (max-width: 767.98px) {
 
 @media only screen and (min-width: 1200px) and (max-width: 1599.98px) {
     .hero-slider-item {
-        height: 650px;
+        height: 500px;
     }
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199.98px),
 only screen and (min-width: 1200px) and (max-width: 1499.98px) {
     .hero-slider-item {
-        height: 500px;
+        height: 450px;
     }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991.98px),
 only screen and (max-width: 767.98px) {
     .hero-slider-item {
-        height: 400px;
+        height: 380px;
     }
 }
 
 @media only screen and (max-width: 575.98px) {
     .hero-slider-item {
-        height: 350px;
+        height: 320px;
     }
 }
 

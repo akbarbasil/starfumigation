@@ -50,12 +50,12 @@
         }
 	});
 
-	// hero slider active js
 	$('.hero-slider-active').slick({
 		fade: true,
 		speed: 1000,
 		autoplay: true,
 		adaptiveHeight: true,
+		dots: true,
 		prevArrow: '<button type="button" class="slick-prev"><i class="fa fa-angle-left"></i></button>',
 		nextArrow: '<button type="button" class="slick-next"><i class="fa fa-angle-right"></i></button>',
 		responsive: [{
@@ -113,6 +113,7 @@
 		slidesToShow: 3,
 		autoplay: true,
 		arrows: false,
+		dots: true,
 		adaptiveHeight: true,
 		responsive: [{
 			breakpoint: 992,
